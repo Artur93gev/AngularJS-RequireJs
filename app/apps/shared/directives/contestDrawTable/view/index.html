@@ -1,0 +1,84 @@
+<div class="fs-back-office-outer-container">
+	<div class="fs-back-office-contest-grid-headers-block" ng-click="openHeadersControl($event)">
+		<span class="fs-back-office-contest-grid-headers-icon"></span>
+	</div>
+	<button class="fs-medium-button fs-white-success-button fs-back-office-contest-create-button" ng-click="openBackOfficeCreateContest()">
+		+
+	</button>
+	<div class="fs-back-office-contest-grid-header-control-block {{(headers.control) ? 'fs-back-office-contest-grid-header-control-block-display' : ''}}" ng-click="$event.stopPropagation()">
+		<div class="fs-back-office-contest-grid-header-control-line" tabindex="{{$index + 1}}" ng-repeat="item in headersForControl" ng-click="choosingHeaders($event, item)" ng-keyPress="choosingHeadersByKeyPress($event, item)">
+			<span class="fs-back-office-contest-grid-header-control-input">
+				<span class="{{(item.model) ? 'fs-back-office-contest-grid-header-control-input-checked' : ''}}"></span>
+			</span>
+			<span class="fs-back-office-contest-grid-header-control-text">
+				{{::item.name}}
+			</span>
+		</div>
+	</div>
+	<div class="fs-back-office-inner-container">
+	    <div class="fs-back-office-contest-grid-header-block">
+	        <div ng-if="item.model" class="fs-back-office-contest-grid-header-item" ng-repeat="item in headersForTable[0]">
+	        	<span class="fs-back-office-contest-grid-header-item-text">
+	        		{{::item.name}}
+	        		<span class="fs-back-office-contest-grid-header-icon"></span>	
+	        	</span>
+	        </div>
+	    </div>
+	    <div class="fs-back-office-contest-grid-content">
+	    	<div ng-repeat="item in headersForTable" ng-init="index = $index" class="fs-back-office-contest-grid-line {{(item.$$model) ? 'fs-back-office-grid-line-checked': ''}}">
+    			<span class="fs-back-office-contest-grid-line-checkbox" ng-click="choosingContestsForCancel(item)">
+    				<span class="{{(item.$$model) ? 'fs-back-office-contest-grid-line-checkbox-checked' : ''}}"></span>
+    			</span>
+	    		<div ng-if="info.model" class="fs-back-office-contest-grid-line-item {{(isNumber(info.value)) ? 'fs-back-office-contest-grid-line-item-number' : ''}}" ng-repeat="info in item track by $index"  ng-click="getMoreInfo(index, info)">
+	    			<span class="fs-back-office-contest-grid-line-item-text {{((info.name == 'PrizeFundType') || info.name == 'ContestDate') ? 'fs-back-office-contest-grid-line-item-text-visibility' : ''}}">
+	    				{{::info.value}}
+	    			</span>
+	    			<span ng-if="(info.name == 'ContestDate')" class="fs-back-office-contest-grid-line-item-text">
+	    				{{(info.value.IsContestStartDate) ? (info.value.ContestDate | date:'HH:mm:ss') : (info.value.ContestDate | date: 'M/d/yy h:mm')}}
+	    			</span>
+	    			<span ng-if="(info.name == 'PrizeFundType')" class="fs-back-office-contest-grid-line-item-prize-icon {{'fs-back-office-contest-grid-line-item-prize-' + info.value}}"></span>
+	    		</div>
+	    	</div>
+	    </div>
+	</div>
+</div>
+<div ng-show="details.visibility" class="fs-back-office-contest-grid-details-container" ng-click="closeContestsDetailsPopup($event)">
+	<div class="fs-back-office-contest-grid-details-block" ng-click="stopEventPropagation($event)">
+		<div class="fs-bakc-office-contest-grid-details-headers-block">
+			<div class="fs-back-office-contest-grid-details-headers-block-item" ng-repeat="(key, value) in detailsForContest[0]">
+				<span class="fs-back-office-contest-grid-details-headers-block-item-text">
+					{{::key}}
+				</span>
+			</div>
+		</div>
+		<span class="fs-back-office-contest-grid-bank-details-close-icon" ng-click="closeContestsDetailsPopup($event)"></span>
+		<div class="fs-back-office-contest-grid-details-content-block">
+			<div class="fs-back-office-contest-grid-details-content-line" ng-repeat="item in detailsForContest">
+				<span class="fs-back-office-contest-grid-details-content-line-item" ng-repeat="(key, value) in  item">
+					<span class="fs-back-office-contest-grid-details-content-line-text">
+						{{(key == 'TransactionDate') ? (value | date: 'M/d/yy h:mm') : value}}
+					</span>
+				</span>
+			</div>
+		</div>
+		<div class="{{(bank.model) ? 'fs-back-office-contest-grid-details-none' : 'fs-back-office-contest-grid-details-none-display'}}">
+			{{::bank.text}}
+		</div>
+	</div>
+	<div class="fs-back-office-contest-grid-report-block"  ng-click="stopEventPropagation($event)">
+		<button class="fs-white-success-button fs-medium-button fs-back-office-contest-report-button" ng-click="(bank.model) ? closeContestsDetailsPopup($event) : makingReportForContest($event)">
+			{{::bank.report}}
+		</button>
+	</div>
+</div>
+<pagination-dir page-count="pageCount" click-function="gettingPage"></pagination-dir>
+<!--<div class="fs-back-office-contest-grid-page-block">-->
+	<!--<div class="fs-back-office-contest-grid-page-part {{(item.value == '...') ? 'fs-back-office-contest-grid-page-part-etc' : ''}} {{(item.model) ? 'fs-back-office-contest-grid-page-part-active' : ''}}" ng-repeat="item in arrOfPages" ng-click="changingPage(item)">-->
+		<!--<span class="fs-back-office-contest-grid-page-text">-->
+			<!--{{item.value}}-->
+		<!--</span>-->
+	<!--</div>-->
+<!--</div>-->
+<button class="fs-medium-button fs-white-success-button fs-back-office-contest-cancel" ng-click="cancelingContests()"">
+	cancel
+</button>

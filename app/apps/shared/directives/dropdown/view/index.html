@@ -1,0 +1,16 @@
+<div class="fs-dropdown">
+    <div class="fs-drop-down-title-block" ng-click="dropdown.toggleDropdown($event)">
+        <span class="fs-drop-down-title">{{dropdown.title}}</span>
+        <span class="icon-fantasy-arrowdown"></span>
+    </div>
+    <div class="fs-drop-down-content" ng-if="dropdown.dropdownShow">
+        <div class="fs-dropdown-search" ng-if="type.hasSearch">
+            <span class="icon-fantasy-search"></span>
+            <input type="text" ng-model="dropdown.search.model" ng-change="dropdown.search(dropdown.search.model)" ng-click="$event.stopPropagation()" ng-keydown="keyPress($event)" spellcheck="false" placeholder="search">
+        </div>
+        <div class="fs-drop-down-item" ng-repeat="item in dropdown.filteredList" ng-click="dropdown.selecting(item, $event)">
+            <span class="icon-fantasy-checkbox" ng-class="{'fs-checked' : item.model}" ng-if="type.multiSelected"></span>
+            <span>{{item[type.itemName]}}</span>
+        </div>
+    </div>
+</div>

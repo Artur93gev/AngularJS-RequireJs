@@ -1,0 +1,31 @@
+{
+  "name": "fantasyBackOffice",
+  "version": "1.0.0",
+  "private": false,
+  "author" : "artur93gev",
+  "scripts": {
+    "start": "grunt"
+  },
+  "dependencies": {
+    "express": "3.4.7",
+    "ejs-locals": "~1.0.2"
+  },
+  "devDependencies": {
+    "grunt": "latest",
+    "grunt-angular-templates": "^1.0.4",
+    "grunt-concat-sourcemap": "^0.4.3",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-requirejs": "^0.4.4",
+    "grunt-contrib-concat": "1.0.1",
+    "grunt-contrib-connect": "^1.0.2",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-cssmin": "latest",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-uglify": "latest",
+    "grunt-contrib-watch": "latest",
+    "grunt-ng-annotate": "latest",
+    "load-grunt-tasks": "latest",
+    "serve-static": "^1.11.1"
+  }
+}

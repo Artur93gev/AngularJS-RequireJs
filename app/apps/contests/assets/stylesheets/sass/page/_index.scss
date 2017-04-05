@@ -1,0 +1,451 @@
+.fs-back-office-contest-block {
+
+	width 		: 100%;
+	display 	: inline-block;
+	box-sizing	: border-box;
+	border 		: 1px solid $dark-scheme-body-color;
+
+	.fs-back-office-contest-filter-block {
+
+		display	: inline-block;
+		width 	: 100%;
+
+		.fs-back-office-contest-filter-header-block {
+
+			height				: 36px;
+			width				: 100%;
+			display				: inline-block;
+			background-color	: $light-scheme-gradient-color-light-3;
+
+			.fs-back-office-contest-filter-header-item {
+
+				text-align 			: center;
+				display 			: inline-block;
+				width 				: 190px;
+				height 				: 100%;
+				background-color	: $light-scheme-gradient-color-light-5;
+
+				.fs-back-office-contest-filter-header-name {
+
+					color 			: $light-scheme-gradient-color-light-1;
+					font-family		: fontRegular;
+					font-size	 	: 14px;
+					font-weight 	: bold;
+					margin-top 		: 10px;
+					display 		: inline-block;
+					text-transform	: uppercase;
+				}
+			}
+		}
+
+		.fs-back-office-contest-filter-action-block {
+
+			width 				: calc(100% - 40px);
+			height 				: 160px;
+			display				: inline-block;
+			background-color	: $light-scheme-gradient-color-light-5;
+			padding 			: 20px 20px 30px 20px;
+
+			.fs-back-office-contest-filter-name-and-prize {
+
+				width 	: 180px;
+				float 	: left;
+				padding	: 0px 20px 0px 0px;
+				display	: inline-block;
+
+				.fs-back-office-contest-filter-name-block {
+
+					height	: 48px;
+					width 	: 100%;
+					display	: inline-block;
+
+					.fs-back-office-contest-filter-name-text {
+
+						width			: 100%;
+						font-family		: fontRegular;
+						font-size 		: 14px;
+						color 			: $dark-scheme-gradient-color-light-2;
+						text-transform	: capitalize;
+					}
+
+					.fs-back-office-contest-filter-name-input {
+
+						outline 			: none;
+						box-sizing			: border-box;
+						height 				: 30px;
+						width 				: 100%;
+						margin-top			: 5px;
+						cursor 				: text;
+						text-indent			: 10px;
+						border 				: 1px solid $light-scheme-gradient-color-light-2;
+						color 				: $light-scheme-gradient-color-light-2;
+						background-color	: $light-scheme-gradient-color-light-5;
+					}
+
+					.fs-back-office-contest-filter-prize-dropdown {
+
+						width 			: 100%;
+						height 			: 30px;
+						cursor 			: pointer;
+						box-sizing		: border-box;
+						border 			: 1px solid $light-scheme-gradient-color-light-2;
+						margin-top		: 5px;
+
+						.fs-back-office-contest-filter-prize-dropdown-icon {
+
+							font-family		: fantasy-font;
+							font-size 		: 14px;
+							color 			: $light-scheme-gradient-color-light-2;
+							display			: inline-block;
+							margin-top 		: 6px;
+							margin-right	: 6px;
+							float 			: right;
+
+							&:before {
+
+								content : 'd';
+							}
+						}
+					}
+
+					.fs-back-office-contest-filter-prize-dropdown-list {
+
+						width 		: 100%;
+						height 		: 90px;
+						display		: inline-block;
+						box-sizing	: border-box;
+						border 		: 1px solid $light-scheme-gradient-color-light-2;
+						overflow-y 	: auto;
+
+						.fs-back-office-contest-filter-prize-dropdown-list-line {
+
+							width	: 100%;
+							height 	: 30px;
+							cursor	: pointer;
+							display	: inline-block;
+
+							.fs-back-office-contest-filter-prize-dropdown-list-line-checkbox {
+
+								display		: inline-block;
+								width 		: 16px;
+								height 		: 16px;
+								float 		: left;
+								margin-left : 5px;
+								margin-top 	: 5px;
+								cursor		: pointer;
+								text-align 	: center;
+								box-sizing	: border-box;
+								border 		: 1px solid $light-scheme-gradient-color-light-2;
+								
+								.fs-back-office-contest-filter-prize-dropdown-list-line-checked {
+
+									display		: inline-block;
+									font-family	: fantasy-font;
+									font-size 	: 12px;
+									float 		: left;
+									margin-top	: 1px;
+									margin-left	: 1px;
+									cursor 		: pointer;
+									color 		: $light-scheme-gradient-color-light-1;
+
+									&:before {
+
+										content : 'n';
+									}
+								}
+							}
+
+							.fs-back-office-contest-filter-prize-dropdown-list-line-item {
+
+								display			: inline-block;
+								font-family		: fontRegular;
+								font-size 		: 12px;
+								float 			: left;
+								margin-top	 	: 5px;
+								cursor 			: pointer;
+								margin-left 	: 5px;
+								color 			: $light-scheme-gradient-color-light-1;
+								text-transform	: capitalize;
+							}
+
+							&:hover {
+
+								background-color	: $dark-scheme-brand-color-1-light;
+
+								.fs-back-office-contest-filter-prize-dropdown-list-line-checked {
+
+									color 	: $light-scheme-gradient-color-light-5;
+								}
+
+								.fs-back-office-contest-filter-prize-dropdown-list-line-item {
+
+									color 	: $light-scheme-gradient-color-light-5;
+								}
+							}
+						}
+					}
+
+					&:last-child {
+
+						margin-top 	: 15px;
+					}
+				}
+			}
+
+			.fs-back-office-contest-filter-contest-details-block {
+
+				width 			: 972px;
+				height 			: 165px;
+				display			: inline-block;
+				padding			: 0px 20px;
+				box-sizing		: border-box;
+				float 			: left;
+				border-left		: 1px solid $light-scheme-gradient-color-light-2;
+				border-right	: 1px solid $light-scheme-gradient-color-light-2;
+
+				.fs-back-office-contest-filter-contest-detail-name-block {
+
+					display	: inline-block;
+					width 	: 130px;
+					float 	: left;
+					height 	: 100%;
+
+					.fs-back-office-contest-filter-contest-detail-name {
+
+						font-family		: fontRegular;
+						color 			: $dark-scheme-gradient-color-light-2;
+						font-size		: 14px;
+						width 			: 100%;
+						height 			: 15px;
+						text-transform	: capitalize;
+						display 		: inline-block;
+					}
+
+					.fs-back-office-contest-filter-contest-detail-line {
+
+						display		: inline-block;
+						height 		: 16px;
+						margin-top	: 10px;
+						cursor 		: pointer;
+						width		: 100%;
+
+						.fs-back-office-contest-filter-contest-detail-line-checkbox {
+
+							display		: inline-block;
+							width 		: 16px;
+							height 		: 16px;
+							float 		: left;
+							cursor		: pointer;
+							text-align 	: center;
+							box-sizing	: border-box;
+							border 		: 1px solid $light-scheme-gradient-color-light-2;
+			
+							.fs-back-office-contest-filter-contest-detail-line-checkbox-checked {
+			
+								display		: inline-block;
+								font-family	: fantasy-font;
+								font-size 	: 12px;
+								float 		: left;
+								margin-top	: 1px;
+								margin-left	: 1px;
+								cursor 		: pointer;
+								color 		: $light-scheme-gradient-color-light-1;
+
+								&:before {
+
+									content : 'n';
+								}
+							}
+
+							.fs-back-office-contest-filter-contest-detail-line-radio {
+
+								width 				: 8px;
+								height				: 8px;
+								float 				: left;
+								margin-left			: 3px;
+								margin-top 			: 3px;
+								display				: inline-block;
+								border-radius		: 4px;
+								background-color	: $light-scheme-gradient-color-light-1;
+							}
+						}
+
+						.fs-back-office-contest-filter-contest-detail-line-name {
+		
+							display			: inline-block;
+							font-family		: fontRegular;
+							font-size 		: 12px;
+							float 			: left;
+							cursor 			: pointer;
+							margin-left 	: 5px;
+							color 			: $light-scheme-gradient-color-light-1;
+							text-transform	: capitalize;
+						}
+					}
+
+					&:last-child {
+
+						width	: 60px;
+					}
+
+					&:first-child {
+
+						.fs-back-office-contest-filter-contest-detail-line {
+
+							.fs-back-office-contest-filter-contest-detail-line-checkbox {
+
+								border-radius	: 8px;
+
+								.fs-back-office-contest-filter-contest-detail-line-checkbox-checked {
+
+
+								}
+							}
+						}
+					}
+
+					&:nth-child(3) {
+
+						width 	: 220px;
+
+						.fs-back-office-contest-filter-contest-detail-line {
+
+							width 	: 50%;
+						}
+					}
+				}
+			}
+
+			.fs-back-office-contest-filter-size-and-fund {
+
+				width			: 390px;
+				display			: inline-block;
+				padding-left	: 20px;
+				float 			: left;
+
+				.fs-back-office-contest-filter-item-block {
+
+					width 	: 184px;
+					float 	: left;
+					display	: inline-block;
+
+					.fs-back-office-contest-filter-entry-name {
+
+						font-family		: fontRegular;
+						font-size 		: 14px;
+						width 			: 100%;
+						height 			: 15px;
+						text-transform	: capitalize;
+						display 		: inline-block;
+						padding-bottom	: 5px;
+						color 			: $dark-scheme-gradient-color-light-2;
+					}
+
+					.fs-back-office-contest-filter-size-input {
+
+						outline 			: none;
+						text-indent 		: 10px;
+						width 				: 85px;
+						cursor 				: text;
+						height 				: 30px;
+						background-color	: $light-scheme-gradient-color-light-5;
+						border 				: 1px solid $light-scheme-gradient-color-light-2;
+						color 				: $light-scheme-gradient-color-light-2;
+					}
+
+					.fs-back-office-contest-filter-calendar {
+						text-align  : center;
+						width 		: 180px;
+						height		: 30px;
+						box-sizing	: border-box;
+						cursor		: pointer;
+						border 		: 1px solid $light-scheme-gradient-color-light-2;
+
+
+						.fs-back-office-contest-filter-calendar-icon {
+
+							font-family		: fantasy-font;
+							font-size 		: 16px;
+							color 			: $light-scheme-gradient-color-light-2;
+							display			: inline-block;
+							float 			: right;
+							cursor 			: pointer;
+							margin-top 		: 5px;
+							margin-right	: 5px;
+
+							&:before {
+
+								content : 'F';
+							}
+						}
+					}
+
+					.second-input {
+
+						margin-left : 5px;
+					}
+
+					&:first-child {
+
+						width 	: 100%;
+					}
+				}
+
+				.right-block {
+
+					margin-left : 20px;
+					width 		: 185px;
+				}
+
+				.down-block {
+
+					margin-top 	: 10px;
+				}
+			}
+		}
+	}
+
+	.fs-back-office-contest-filter-botton-block {
+
+		height 				: 60px;
+		width 				: 100%;
+		display				: inline-block;
+		margin-top 			: -4px;
+		float 				: left;
+		background-color	: $light-scheme-gradient-color-light-4;
+
+		.fs-back-office-contest-filter-button {
+
+			float 			: right;
+			margin-right	: 20px;
+			margin-top		: 15px;
+			color 			: $light-scheme-gradient-color-light-1;
+
+			&:hover {
+
+				color 	: $light-scheme-gradient-color-light-5;
+			}
+
+			&:nth-child(2) {
+
+				margin-right	: 10px;
+			}
+		}
+	}
+	.fs-back-office-contest-filter-calendar1{
+		padding-top    : 6px !important;
+		font-family    : fontRegular;
+		font-size      : 12px;
+		float          : left;
+		width          : 42%;
+
+	}
+	.fs-back-office-contest-filter-calendar2{
+		padding-top    : 6px !important;
+		font-family    : fontRegular;
+		font-size      : 12px;
+		float          : left;
+		width          : 42%;
+	}
+
+}

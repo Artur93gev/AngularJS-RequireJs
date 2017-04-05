@@ -1,0 +1,286 @@
+.fs-back-office-icon {
+
+	font-family : fantasy-font;
+	font-size   : 22px;
+	display     : inline-block;
+	margin-top  : 15px;
+}
+
+.fs-back-office-header {
+	
+	width       		: calc(100vw - 50px);
+	height      		: 56px;
+	position 			: absolute;
+	top 				: 0px;
+	right 				: 0px;
+	float 				: right;
+	background-color	: $light-scheme-gradient-color-light-5;
+	@include transition(0.3s);
+
+	.fs-back-office-header-icon {
+
+		margin-left : 25px;
+		cursor 		: pointer;
+		color       : $light-scheme-gradient-color-light-1;
+
+		&:before {
+
+			content : 'i';
+		}
+	}
+
+	.fs-back-office-header-personal-part {
+
+		height  : 100%;
+		width   : 520px;
+		float   : right;
+
+		.fs-back-office-header-personal-part-help {
+
+			float       : left;
+			margin-left : 25px;
+			color       : $light-scheme-gradient-color-light-1;
+
+			&:before {
+
+				content : 'Q';
+			}
+		}
+
+		.fs-back-office-header-personal-part-notification {
+
+			float       : left;
+			margin-left : 10px;
+			color       : $light-scheme-gradient-color-light-1;
+
+			&:before {
+
+				content : '+';
+			}
+		}
+
+		.fs-back-office-header-personal-part-message {
+
+			float       : left;
+			margin-left : 10px;
+			color       : $light-scheme-gradient-color-light-1;
+
+			&:before {
+
+				content : ',';
+			}
+		}
+
+		.fs-back-office-header-personal-seperate-lines {
+
+			float               : left;
+			width               : 1px;
+			height              : 25px;
+			margin-left         : 15px;
+			margin-top          : 15px;
+			background-color    : $light-scheme-gradient-color-light-1;
+		}
+
+		.fs-back-office-header-personal-current-wallet {
+
+			float       : left;
+			margin-left : 15px;
+			color       : #12adad;
+
+			&:before {
+
+				content : '.';
+			}
+		}
+		
+		.fs-back-office-header-personal-bank-wallet {
+			
+			float		: left;
+			margin-left : 15px;
+			color 		: #2dc38d;
+
+			&:before {
+
+				content : ';';
+			}
+		}
+		
+		.fs-back-office-header-personal-cloud-wallet {
+			
+			float 		: left;
+			margin-left : 15px;
+			color 		: #de2a8a;
+
+			&:before {
+
+				content 		: '/';
+			}
+		}
+
+		.fs-back-office-header-personal-wallet-block {
+
+			display : inline-block;
+			float 	: left;
+			
+			.fs-back-office-header-personal-wallet-text {
+
+				float       	: left;
+				display     	: inline-block;
+				font-family 	: fontRegular;
+				font-size		: 11px;
+				text-transform	: uppercase; 
+				color 			: #a7abb6;
+				margin-top		: 10px;
+				margin-left		: 10px; 	
+			}
+
+			.fs-back-office-header-personal-wallet-score {
+
+				margin-left	: 10px;
+				margin-top 	: 26px;
+				color 		: $dark-scheme-gradient-color-light-2; 
+			}
+
+		}
+		
+		.fs-back-office-header-personal-part-user-icon {
+
+			float 		: left;
+			margin-left : 15px;
+			color       : $light-scheme-gradient-color-light-1;
+
+			&:before {
+
+				content : '-';
+			}
+		}
+
+		.fs-back-office-header-personal-part-username {
+
+			font-family 	: fontRegular;
+			font-size 		: 16px;
+			float 			: left;
+			cursor 			: pointer;
+			display 		: inline-block;
+			text-transform	: capitalize;
+			color 			: $light-scheme-gradient-color-light-1;
+			margin-left 	: 10px;
+			margin-top 		: 16px;
+		}
+
+		.fs-back-office-header-personal-part-username-icon {
+
+			float 		: left;
+			margin-left	: 10px;
+			font-size 	: 12px;
+			cursor 		: pointer;
+			margin-top 	: 19px;
+			color 		: $light-scheme-gradient-color-light-1;
+
+			&:before {
+
+				content : 'd';
+			}
+		}
+
+		.fs-back-office-header-personal-part-lang-border {
+
+			width 			: 56px;
+			height 			: 33px;
+			float 			: right;
+			margin-right	: 10px;
+			margin-top 		: 10px;
+			display			: inline-block;
+			border 			: 1px solid $light-scheme-gradient-color-light-2;
+
+			.fs-back-office-header-personal-part-lang {
+
+				display			: inline-block;
+				float 			: left;
+				margin-left 	: 7px;
+				font-size 		: 16px;
+				text-transform	: uppercase;
+				margin-top 		: 7px;
+				font-family 	: fontRegular;
+				color 			: $light-scheme-gradient-color-light-2; 
+			}
+
+			.fs-back-office-header-personal-part-lang-icon {
+
+				float 		: left;
+				margin-left	: 5px;
+				font-size 	: 12px;
+				margin-top 	: 9px;
+				color 		: $light-scheme-gradient-color-light-2;
+
+				&:before {
+
+					content : 'd';
+				}
+			}
+		}
+
+		.fs-back-office-general-tab-user-settings {
+
+			display 	: inline-block;
+			position 	: absolute;
+			right 		: 85px;
+			width 		: 105px;
+			height 		: 25px;
+			text-align 	: center;
+			border 		: 1px solid $light-scheme-gradient-color-light-2;
+			top 		: 35px;
+
+			.fs-back-office-general-tab-user-settings-log-out {
+
+				font-size 	: 14px;
+				cursor 		: pointer;
+				color 		: $light-scheme-gradient-color-light-1;
+				font-family : fontRegular;
+				display 	: inline-block;
+				margin-top 	: 6px;
+			}
+		}
+	}
+}
+
+.fs-back-office-not-available-modal {
+
+	position 			: absolute;
+	padding 			: 10px;
+	top 				: 43px;
+	display				: none;
+	left 				: 0px;
+	background-color	: $light-scheme-gradient-color-light-2;
+	z-index 			: 2;
+
+	.fs-back-office-not-available-modal-part {
+
+		display				: inline-block;
+		background-color	: $light-scheme-gradient-color-light-2;
+		transform 			: rotate(45deg);
+		width				: 10px;
+		height 				: 10px;
+		position 			: absolute;
+		top 				: -5px;
+		left 				: 10px;
+
+	}
+
+	.fs-back-office-not-available-modal-text {
+
+		font-family	: fontRegular;
+		font-size 	: 16px;
+		color 		: $light-scheme-gradient-color-light-5;
+	}
+}
+
+.fs-back-office-not-available-modal-visibility {
+
+	display : inline-block;
+}
+
+.fs-back-office-header-opened {
+
+	width : calc(100vw - 240px);
+}

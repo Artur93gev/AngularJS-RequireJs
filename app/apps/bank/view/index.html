@@ -1,0 +1,55 @@
+<div class="fs-back-office-bank-part-body-block">
+	<div class="{{(!search.bool) ? 'fs-back-office-bank-part-search-display' : ''}} fs-back-office-bank-part-search-border">
+		<span class="fs-back-office-bank-part-search-icon"></span>
+		<input type="text" placeholder="Search" ng-change="searchingPartners()" class="fs-back-office-bank-part-search" ng-model="search.item">
+	</div>
+	<button ng-if="(!partnerId)" class="fs-white-success-button fs-medium-button fs-back-office-bank-part-Essa" ng-click="openEssaMode()">
+		Essa mode
+	</button>
+	<div class="{{(!search.bool) ? 'fs-back-office-bank-part-network-block-display' : ''}} fs-back-office-bank-part-network-block">
+		<div class="fs-back-office-bank-part-network-header-block">
+			<div class="fs-back-office-bank-part-network-header">
+				<span class="fs-back-office-bank-part-network-header-text">
+					Network
+				</span>
+			</div>
+		</div>
+		<div class="fs-back-office-bank-part-network-content">
+			<div class="fs-back-office-bank-part-network-block">
+				<div class="fs-back-office-bank-part-network-list-block">
+					<div class="fs-back-office-bank-part-networks-list">
+						<div class="fs-back-office-bank-part-networks-partner-line" ng-repeat="item in networksAllList">
+							<input type="checkbox" class="fs-back-office-bank-part-network-item-checkbox">
+							<div class="fs-back-office-bank-part-network-item-name">
+								{{item.name + '(' + item.id + ')'}}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="fs-back-office-bank-part-network-block" ng-repeat="item in networkFromTest track by $index">
+				<div class="fs-back-office-bank-part-network-list-block">
+					<button class="fs-white-success-button fs-medium-button fs-back-office-network-block-add-partner">
+						{{($index == networkFromTest.length - 1) ? 'add new list' : '+'}}
+					</button>
+					<div class="fs-back-office-bank-part-networks-list">
+						<div class="fs-back-office-bank-part-networks-partner-line" ng-repeat="network in item track by $index">
+							<input type="checkbox" class="fs-back-office-bank-part-network-item-checkbox">
+							<div class="fs-back-office-bank-part-network-item-name">
+								{{network + '(id)'}}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="fs-back-office-bank-part-for-reset">
+			<button class="fs-medium-button fs-white-success-button fs-back-office-bank-part-reset">
+				reset
+			</button>
+		</div>
+	</div>
+	<bank-dir></bank-dir>
+	<loader-dir ng-show="loaderContest.show"></loader-dir>
+	<contest-draw-table lobbyType="0" class="s-back-office-contest-table"></contest-draw-table>
+</div>

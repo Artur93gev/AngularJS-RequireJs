@@ -1,0 +1,13 @@
+<div class="fs-back-office-contest-filter-contest-detail-name-block">
+	<span class="fs-back-office-contest-filter-contest-detail-name">
+			{{::checkbox.itemList.name}}
+	</span>
+	<div class="fs-back-office-contest-filter-contest-detail-line" ng-repeat="item in checkbox.itemList.list" ng-click="checkbox.control($event, item)">
+		<div class="fs-back-office-contest-filter-contest-detail-line-checkbox">
+			<span class="{{item.model ? 'fs-back-office-contest-filter-contest-detail-line-checkbox-checked' : ''}}"></span>
+		</div>
+		<span class="fs-back-office-contest-filter-contest-detail-line-name">
+			{{::item.name}}
+		</span>
+	</div>
+</div>

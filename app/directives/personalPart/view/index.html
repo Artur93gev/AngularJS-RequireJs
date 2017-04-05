@@ -1,0 +1,60 @@
+<div class="fs-back-office-header {{general.model ? 'fs-back-office-header-opened' : ''}}">
+    <span class="fs-back-office-icon fs-back-office-header-icon" ng-click="openGeneralTabs($event)"></span>
+    <div class="fs-back-office-header-personal-part">
+        <div class="fs-back-office-not-available-modal {{(soon.model) ? 'fs-back-office-not-available-modal-visibility' : ''}}">
+            <span class="fs-back-office-not-available-modal-part">
+            </span>
+            <span class="fs-back-office-not-available-modal-text">
+                comming soon
+            </span>
+        </div>
+        <span class="fs-back-office-icon fs-back-office-header-personal-part-help" ng-mouseover="commingSoonShow($event)" ng-mouseleave="commingSoonHide($event)"></span>
+        <span class="fs-back-office-icon fs-back-office-header-personal-part-notification" ng-mouseover="commingSoonShow($event)" ng-mouseleave="commingSoonHide($event)"></span>
+        <span class="fs-back-office-icon fs-back-office-header-personal-part-message" ng-mouseover="commingSoonShow($event)" ng-mouseleave="commingSoonHide($event)"></span>
+        <div class="fs-back-office-header-personal-seperate-lines"></div>
+        <!-- <span class="fs-back-office-icon fs-back-office-header-personal-current-wallet"></span> -->
+        <!-- <div class="fs-back-office-header-personal-wallet-block">
+            <div class="fs-back-office-header-personal-wallet-text">
+                Current
+            </div>
+            <div class="fs-back-office-header-personal-wallet-score">
+                {{100000 + '  $'}}
+            </div>
+        </div> -->
+        <span class="fs-back-office-icon fs-back-office-header-personal-bank-wallet"></span>
+        <div class="fs-back-office-header-personal-wallet-block">
+            <div class="fs-back-office-header-personal-wallet-text">
+                bank
+            </div>
+            <div class="fs-back-office-header-personal-wallet-score">
+                {{::partner.bankBalance + '  $'}}
+            </div>
+        </div>
+        <!-- <span class="fs-back-office-icon fs-back-office-header-personal-cloud-wallet" ng-mouseover="commingSoonShow($event)" ng-mouseleave="commingSoonHide($event)"></span>
+         --><!-- <div class="fs-back-office-header-personal-wallet-block" ng-mouseover="commingSoonShow($event)" ng-mouseleave="commingSoonHide($event)">
+            <div class="fs-back-office-header-personal-wallet-text">
+                cloud
+            </div>
+            <div class="fs-back-office-header-personal-wallet-score">
+                {{0 + '  $'}}
+            </div>
+        </div> -->
+        <div class="fs-back-office-header-personal-seperate-lines"></div>
+        <span class="fs-back-office-icon fs-back-office-header-personal-part-user-icon"></span>
+        <div class="fs-back-office-header-personal-part-username" ng-click="openUserSettings($event)">
+            {{::partner.username}}
+        </div>
+        <span class="fs-back-office-icon fs-back-office-header-personal-part-username-icon" ng-click="openUserSettings($event)"></span>
+        <div ng-if="partner.settings" class="fs-back-office-general-tab-user-settings">
+            <span class="fs-back-office-general-tab-user-settings-log-out" ng-click="userLogOut($event)">
+                Log out
+            </span>
+        </div>
+        <div class="fs-back-office-header-personal-part-lang-border" ng-mouseover="commingSoonShow($event)" ng-mouseleave="commingSoonHide($event)">
+            <div class="fs-back-office-header-personal-part-lang">
+                en
+            </div>
+            <span class="fs-back-office-icon fs-back-office-header-personal-part-lang-icon"></span>
+        </div>
+    </div>
+</div>

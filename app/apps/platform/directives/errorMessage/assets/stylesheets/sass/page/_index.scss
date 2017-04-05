@@ -1,0 +1,130 @@
+.fs-back-office-error-success-message-body-block {
+
+	width                   : 100%;
+	height                  : 100%; 
+	top                     : 0;
+	left                    : 0;
+	position                : fixed;
+	z-index                 : 1000;
+	outline                 : 0;
+	background-color        : rgba(18, 22, 35, 0.94);
+	display                 : flex;     
+
+	.fs-back-office-message-block {
+
+		position            : relative;
+		margin              : 0 auto;
+		width               : 440px;
+		height              : 330px;
+		top                 : 250px;
+		text-align 			: center;
+		background-color    : $light-scheme-gradient-color-light-5;
+
+		.fs-back-office-message-block-header {
+
+			width           : 100%;
+			height          : 80px;
+			text-align      : center;
+			border-bottom   : 1px solid $light-scheme-gradient-color-light-4;
+			display         : inline-block;
+
+			.fs-back-office-message-block-header-text {
+
+				font-family     : fontRegular;
+				font-size       : 20px;
+				display			: inline-block;
+				margin-top      : 35px;
+				color           : $light-scheme-gradient-color-light-2;
+				text-transform  : uppercase;
+			}
+
+			.fs-back-office-message-block-header-icon-success {
+
+				font-family		: fantasy-font;
+				font-size 		: 17px;
+				color 			: $light-scheme-gradient-color-light-2;
+				display 		: inline-block;
+				float 			: right;
+				right			: 35px;
+				position		: absolute;
+				margin-top 		: 35px;
+
+
+				&:before {
+
+					content : 'b';
+				}
+			}
+		}
+
+		.fs-back-office-message-content-block {
+
+			width 		: 320px;
+			height 		: 90px;
+			margin-top	: 20px;
+			display 	: inline-block;
+
+			.fs-back-office-message-content-text {
+
+				font-family : fontRegular;
+				font-size 	: 18px;
+				margin-top 	: 60px;
+				color 		: $light-scheme-gradient-color-light-2;
+			}
+		}
+
+		.fs-back-office-message-content-icon-round {
+
+			width  				: 40px;
+			height 				: 40px;
+			border-radius 		: 20px;
+			position 			: relative;
+			margin 				: 0 auto;
+			margin-top 			: 20px;
+			background-color	: $dark-scheme-brand-color-6;
+			color 				: $light-scheme-gradient-color-light-5;
+
+			.fs-back-office-message-content-icon {
+
+				font-family : fantasy-font;
+				font-size	: 20px;
+				display		: inline-block;
+				margin-top 	: 10px;
+
+				&:before {
+
+					content : 'b';
+				}
+			}
+		}
+
+		.fs-back-office-message-content-buttons-block {
+
+			width 		: 320px;
+			height 		: 40px;
+			display		: inline-block;
+			position 	: relative;
+			top 		: 0px;
+
+			.fs-back-office-message-content-apply-button {
+
+				width 				: 155px;
+				height 				: 100%;
+				font-family			: fontRegular;
+				font-size 			: 20px;
+				margin-left			: 5px;
+				border 				: none;
+				color 				: $light-scheme-gradient-color-light-1;
+				background-color 	: transparent;
+				box-sizing 			: border-box;
+				border 				: 1px solid $light-scheme-gradient-color-light-3;
+
+				&:hover {
+
+					opacity 			: 0.8;
+					background-color	: rgba(194, 197, 205, 0.1);
+				}
+			} 
+		}
+	}
+}

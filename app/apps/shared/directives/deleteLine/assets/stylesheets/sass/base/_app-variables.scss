@@ -1,0 +1,12 @@
+$dark-scheme-brand-color-1: #1a7051;
+$gradient-color: #121623;
+$dark-scheme-brand-color-1-light: lighten(saturate($dark-scheme-brand-color-1, 1), 7); // #208c65
+$light-scheme-gradient-color-light-5: lighten(desaturate(adjust-hue($gradient-color, -226deg), 32), 90); // #ffffff
+// transitions
+
+@mixin transition($second){
+    -webkit-transition: $second ease-in-out;
+    -moz-transition: $second ease-in-out;
+    -o-transition: $second ease-in-out;
+    transition: $second ease-in-out;
+}

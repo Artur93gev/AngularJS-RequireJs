@@ -1,0 +1,63 @@
+.fs-back-office-contest-filter-contest-detail-name-block {
+
+	display	: inline-block;
+	width 	: 130px;
+	float 	: left;
+
+	.fs-back-office-contest-filter-contest-detail-name {
+
+		font-family		: fontRegular;
+		color 			: $dark-scheme-gradient-color-light-2;
+		font-size		: 14px;
+		width 			: 100%;
+		height 			: 15px;
+		text-transform	: capitalize;
+		display 		: inline-block;
+	}
+
+	.fs-back-office-contest-filter-contest-detail-line {
+
+		display		: inline-block;
+		height 		: 16px;
+		margin-top	: 10px;
+		cursor 		: pointer;
+		width		: 100%;
+
+		.fs-back-office-contest-filter-contest-detail-line-radio {
+
+			display		: inline-block;
+			border-radius	: 8px;
+			width 		: 16px;
+			height 		: 16px;
+			float 		: left;
+			cursor		: pointer;
+			text-align 	: center;
+			box-sizing	: border-box;
+			border 		: 1px solid $light-scheme-gradient-color-light-2;
+
+			.fs-back-office-contest-filter-contest-detail-line-radio-checked {
+
+				width 				: 8px;
+				height				: 8px;
+				float 				: left;
+				margin-left			: 3px;
+				margin-top 			: 3px;
+				display				: inline-block;
+				border-radius		: 4px;
+				background-color	: $light-scheme-gradient-color-light-1;
+			}
+		}
+
+		.fs-back-office-contest-filter-contest-detail-line-name {
+
+			display			: inline-block;
+			font-family		: fontRegular;
+			font-size 		: 12px;
+			float 			: left;
+			cursor 			: pointer;
+			margin-left 	: 5px;
+			color 			: $light-scheme-gradient-color-light-1;
+			text-transform	: capitalize;
+		}
+	}
+}

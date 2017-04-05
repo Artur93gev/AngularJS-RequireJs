@@ -1,0 +1,21 @@
+<div class="fs-back-office-partner-login-part" tabindex="1" ng-keydown="validateUserByKeyPress($event)">
+	<div class="fs-back-office-partner-login-block">
+		<div class="fs-back-office-partner-login-fields">
+			<input type="text" placeholder="Username" class="fs-back-office-partner-login-name" ng-model="partner.name">
+			<div class="fs-back-office-partner-login-err-name" ng-show="err.name">
+				<span class="fs-back-office-partner-login-err-name-text">
+					{{'Please enter your username'}}
+				</span>
+			</div>
+			<input type="password" placeholder="Password" class="fs-back-office-partner-login-password" ng-model="partner.password">
+			<div class="fs-back-office-partner-login-err-password" ng-show="err.password">
+				<span class="fs-back-office-partner-login-err-password-text">
+					{{ text || 'Please enter your password'}}
+				</span>
+			</div>
+			<button class="fs-white-success-button fs-medium-button fs-back-office-login-part-button" ng-click="validateUser($event)">
+				Login
+			</button>
+		</div>
+	</div>
+</div>

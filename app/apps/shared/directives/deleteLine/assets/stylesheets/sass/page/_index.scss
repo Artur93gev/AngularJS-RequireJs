@@ -1,0 +1,21 @@
+.fs-back-office-cancel-line {
+
+    width 				: 100px;
+    height	 			: 36px;
+    float 				: left;
+    margin-left 		: 10px;
+    font-size 			: 22px;
+    left 				: 10px;
+    border 				: none;
+    background-color	: $dark-scheme-brand-color-1-light;
+    text-align 			: center;
+    outline 			: none;
+    color 		 		: $light-scheme-gradient-color-light-5;
+    cursor 	 			: pointer;
+	@include transition(0.2s);
+
+    &:hover {
+
+        opacity : 0.8;
+    }
+}

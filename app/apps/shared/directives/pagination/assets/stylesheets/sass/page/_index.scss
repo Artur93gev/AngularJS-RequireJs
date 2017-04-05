@@ -1,0 +1,67 @@
+.fs-pagination-block {
+
+    width       : 330px;
+    position    : absolute;
+    height      : 36px;
+    bottom      : 10px;
+    left        : 10px;
+
+    &.fs-pagination-to-right {
+
+        padding-left  : 111px;
+        box-sizing    : border-box;
+    }
+
+    .fs-each-page {
+
+        width               : 34px;
+        height              : 100%;
+        float               : left;
+        margin-left         : 3px;
+        cursor              : pointer;
+        background-color    : $dark-scheme-brand-color-1-light;
+        color               : $light-scheme-gradient-color-light-5;
+        display             : inline-block;
+        text-align          : center;
+
+        &:first-child {
+
+            margin-left : 0px;
+        }
+
+        .fs-page-text {
+
+            font-family : fontRegular;
+            cursor      : pointer;
+            font-size   : 20px;
+            display     : inline-block;
+            margin-top  : 6px;
+            font-weight : bold;
+        }
+
+        &:hover {
+
+            opacity : 0.8;
+        }
+    }
+
+    .fs-page-etc {
+
+        background-color   : $dark-scheme-body-color;
+        color              : $light-scheme-gradient-color-light-1;
+        cursor             : default;
+        pointer-events     : none;
+
+        .fs-page-text {
+
+            cursor     : default;
+            margin-top : 16px;
+        }
+    }
+
+    .fs-page-active {
+
+        background-color    : $light-scheme-gradient-color-light-5;
+        color               : $dark-scheme-brand-color-1-light;
+    }
+}

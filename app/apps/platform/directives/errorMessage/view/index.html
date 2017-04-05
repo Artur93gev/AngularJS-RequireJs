@@ -1,0 +1,23 @@
+<div ng-if="error.flag" class="fs-back-office-error-success-message-body-block" tabindex="2" ng-keydown="closeErrSucMessageByKeypress($event)">
+	<div class="fs-back-office-message-block">
+		<div class="fs-back-office-message-block-header">
+			<span class="fs-back-office-message-block-header-text">
+				{{messageSend.header}}
+			</span>
+			<span class="{{(messageSend.status) ? 'fs-back-office-message-block-header-icon-success' : ''}}" ng-click="closingErrSucPopup($event)"></span>
+		</div>
+		<div class="fs-back-office-message-content-icon-round">
+			<span class="fs-back-office-message-content-icon"></span>
+		</div>
+		<div class="fs-back-office-message-content-block">
+			<span class="fs-back-office-message-content-text">
+				{{messageSend.text}}
+			</span>
+		</div>
+		<div class="fs-back-office-message-content-buttons-block">
+			<button class="fs-white-success-button fs-medium-button fs-back-office-message-content-apply-button" ng-click="closingErrSucPopup($event)">
+				{{messageSend.applyButton}}
+			</button>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,92 @@
+.fs-back-office-filters-container {
+
+	width 		: 100%;
+	display 	: inline-block;
+	box-sizing	: border-box;
+	border 		: 1px solid $dark-scheme-body-color;
+
+	.fs-back-office-filters-block {
+
+		display	: inline-block;
+		width 	: 100%;
+
+		.fs-back-office-filters-header-block {
+
+			height				: 36px;
+			width				: 100%;
+			display				: inline-block;
+			background-color	: $light-scheme-gradient-color-light-3;
+
+			.fs-back-office-filters-header-item {
+
+				text-align 			: center;
+				display 			: inline-block;
+				width 				: 190px;
+				height 				: 100%;
+				background-color	: $light-scheme-gradient-color-light-5;
+
+				.fs-back-office-filters-header-name {
+
+					color 			: $light-scheme-gradient-color-light-1;
+					font-family		: fontRegular;
+					font-size	 	: 14px;
+					font-weight 	: bold;
+					margin-top 		: 10px;
+					display 		: inline-block;
+					text-transform	: uppercase;
+				}
+			}
+		}
+
+		.fs-back-office-filters-action-block {
+
+			width 				: calc(100% - 40px);
+			display				: inline-block;
+			background-color	: $light-scheme-gradient-color-light-5;
+			padding 			: 20px 20px 30px 20px;
+
+		}
+	}
+
+	.fs-back-office-filters-botton-block {
+
+		height 				: 60px;
+		width 				: 100%;
+		display				: inline-block;
+		margin-top 			: -4px;
+		float 				: left;
+		background-color	: $light-scheme-gradient-color-light-4;
+
+		.fs-back-office-filters-button {
+
+			float 				: right;
+			margin-right		: 20px;
+			margin-top			: 15px;
+			color 				: $light-scheme-gradient-color-light-1;
+			height 				: 36px;
+		    min-width 			: 100px;
+		    text-align 			: center;
+		    outline 			: none;
+		    text-transform 		: uppercase;
+		    font-family 		: fontRegular;
+		    font-size 			: 14px;
+	        background-color 	: transparent;
+		    border 				: 1px solid #7d8393;
+		    white-space 		: nowrap;
+		    overflow 			: hidden;
+		    text-overflow 		: ellipsis;
+			@include transition(0.2s);
+
+			&:hover {
+
+				color 				: $light-scheme-gradient-color-light-5;
+				background-color 	: $dark-scheme-brand-color-1-light;
+			}
+
+			&:nth-child(2) {
+
+				margin-right	: 10px;
+			}
+		}
+	}
+}

@@ -1,0 +1,13 @@
+<div class="fs-back-office-general-tabs-block {{general.model ? 'fs-back-office-general-tabs-block-opened' : ''}}">
+    <div class="fs-back-office-general-tab-betco">
+        <span class="fs-back-office-general-tab-betco-icon"></span>
+    </div>
+    <div class="fs-back-office-general-tab {{item.model ? 'fs-back-office-general-tab-active' : ''}} {{'fs-back-office-general-tab-' + item.value}} {{general.model ? 'fs-back-office-general-tab-opened' : ''}}" ng-repeat="item in ::$root.generalTabs" ng-click="choosingGenTab(item)">
+        <span class="fs-back-office-general-tab-icon {{'fs-back-office-general-' + item.value}}"></span>
+        <div class="fs-back-office-general-tab-name">
+            <span>
+                {{::item.value}}
+            </span>
+        </div>
+    </div>
+</div>

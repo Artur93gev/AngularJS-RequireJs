@@ -1,0 +1,483 @@
+<div class="fs-back-office-body-block" ng-click="closeBackOfficeCreateContest($event)" ng-keydown="keyDownCloseBackOfficeCreateContest($event)">
+	<div class="fs-back-office-contest-block" tabindex="1" ng-click="closeDropDowns(); stopEventPropagation($event)">
+		<div class="fs-back-office-contest-header">
+			<div class="fs-back-office-contest-header-text">
+				create contest
+			</div>
+			<span class="fs-back-office-contest-header-icon" ng-click="closeBackOfficeCreateContest($event)">
+			</span>
+		</div>
+		<div class="fs-back-office-contest-menu">
+			<div class="fs-back-office-contest-menu-general {{(arrOfContestsOfMainParts[0].model) ? 'fs-back-office-contest-menu-active' : ''}}" ng-click="openGenPart($event)">
+				<div class="fs-back-office-contest-menu-text">
+					general
+				</div>
+			</div>
+			<div class="fs-back-office-contest-menu-league {{(arrOfContestsOfMainParts[1].model) ? 'fs-back-office-contest-menu-active' : ''}}" ng-click="openLeaguePart($event)">
+				<div class="fs-back-office-contest-menu-text">
+					select league
+				</div>
+			</div>
+			<div class="fs-back-office-contest-menu-fixture {{(arrOfContestsOfMainParts[2].model) ? 'fs-back-office-contest-menu-active' : ''}}" ng-click="openFixtPart($event)">
+				<div class="fs-back-office-contest-menu-text">
+					choose fixtures
+				</div>
+			</div>
+			<div class="fs-back-office-contest-menu-details {{(arrOfContestsOfMainParts[3].model) ? 'fs-back-office-contest-menu-active' : ''}}" ng-click="openContDetPart($event)">
+				<div class="fs-back-office-contest-menu-text">
+					contest details
+				</div>
+			</div>
+			<div ng-if="isNetwork.model" class="fs-back-office-contest-network-details {{(arrOfContestsOfMainParts[4].model) ? 'fs-back-office-contest-menu-active' : ''}}" ng-click="openNetworkPart($event)">
+				<div class="fs-back-office-contest-menu-text">
+					network
+				</div>
+			</div>
+		</div>
+		<!-- general part start -->
+		<div class="fs-back-office-general-part {{(arrOfMainParts[0].model) ? 'fs-back-office-general-tabs-display' : ''}}">
+			<div class="fs-back-office-general-input-container" ng-click="stopEventPropagation($event)">
+				<div class="fs-back-office-general-input-block">
+					<div class="fs-back-office-general-input-header">
+						Sport Type
+					</div>
+					<div class="fs-back-office-general-drop-down" ng-click="openSportsDropDown($event)">
+						<div class="fs-back-office-general-chosen-part">
+							{{choosenSportType}}
+						</div>
+						<span class="fs-back-office-arrow-down"></span>
+						<div class="fs-back-office-drop-down-list fs-back-office-sports-list">
+							<div ng-repeat="item in sportsForFirstChoose" ng-click="choosingSportType(item.Name, item.Id)">
+								<a>
+									{{item.Name}}
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="fs-back-office-general-input-block">
+					<div class="fs-back-office-general-input-header">
+						Contest Name
+					</div>
+					<div class="fs-back-office-general-drop-down {{(error.contestName) ? 'fs-back-office-general-drop-down-err' : ''}}">
+						<input type="text" class="fs-back-office-general-input" ng-model="contest.name">
+					</div>
+				</div>
+				<div ng-if="(error.contestName)" class="fs-back-office-err-for-contest-name-block">
+					<span class="fs-back-office-err-for-contest-name-text">
+						Please fill the contest name
+					</span>
+				</div>
+
+				<!-- comment this part -->
+				<!-- <div class="fs-back-office-general-input-block">
+					<div class="fs-back-office-general-input-header">
+						Network
+					</div>
+					<div class="fs-back-office-general-drop-down" ng-click="openNetworksDropDown()">
+						<div class="fs-back-office-general-chosen-part">
+							{{choosenNetworkCount}}
+						</div>
+						<span class="fs-back-office-arrow-down"></span>
+						<div class="fs-back-office-drop-down-list fs-back-office-networks-list">
+							<div ng-repeat="item in partnersForFirstChoose" ng-click="choosingNetworks(item)">
+								<input type="checkbox" ng-model="item.model">
+								<span class="fs-back-office-network-checkbox">
+									<span ng-if="(item.model)" class="fs-back-office-create-contest-network-checkbox"></span>
+								</span>
+								<a>
+									{{item.name}}
+								</a>
+							</div>
+						</div>
+					</div>
+				</div> -->
+				<!-- comment end -->
+				<div class="fs-back-office-general-input-block">
+					<div class="fs-back-office-general-input-header">
+						Privacy
+					</div>
+					<div class="fs-back-office-general-drop-down" ng-click="openPrivacyDropDown($event)">
+						<div class="fs-back-office-general-chosen-part">
+							{{choosenPrivacy}}
+						</div>
+						<span class="fs-back-office-arrow-down"></span>
+						<div class="fs-back-office-drop-down-list fs-back-office-privacy-list">
+							<div ng-repeat="item in dataFromSrv.arrOfPrivacy" ng-click="choosingPrivacy(item.name)">
+								<a>
+									{{item.name}}
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div ng-if="(error.password)" class="fs-back-office-err-for-contest-password-block">
+					<span class="fs-back-office-err-for-contest-password-text">
+						Please fill the password
+					</span>
+				</div>
+				<div class="fs-back-office-general-input-block {{(flag.forPasswordPart) ? 'fs-back-office-general-pass-display' : ''}}">
+					<div class="fs-back-office-general-input-header">
+						Password
+					</div>
+					<div class="fs-back-office-general-drop-down {{(error.password) ? 'fs-back-office-general-input-for-err-password' : ''}}">
+						<input type="password" class="fs-back-office-general-input" ng-model="contest.password">
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- general part end -->
+		<!-- select league part start -->
+		<div class="fs-back-office-select-league-part {{(arrOfMainParts[1].model) ? 'fs-back-office-general-tabs-display' : ''}}">
+			<div class="fs-back-office-select-league-list" ng-repeat="item in arrOfRegionsBySport">
+				<div class="fs-back-office-select-league-header">
+					<div>
+						{{item.name}}
+					</div>
+				</div>
+				<div class="fs-back-office-select-league-list-item {{(league.id == 1169 || league.id == 1173 || league.id == 1174 || league.id == 1176 || league.id == 1175) ? '' :'fs-back-office-select-league-list-item-disabled'}}" ng-click="selectingLeague(league)" ng-repeat="league in item.competitions">
+					<span class="{{'icon' + league.id}} fs-back-office-select-league-list-item-icon"></span>
+					<div ng-if="!league.model && leagueChecked" class="fs-back-office-example {{'fs-back-office-select-league' + league.id}}">
+						You may choose only one league
+					</div>
+					<div ng-if="!league.model && leagueChecked" class="fs-back-office-example {{'fs-back-office-select-league-message-part' + league.id}}"></div>
+					<div class="{{(league.name == 'Bundesliga') ? 'fs-back-office-bundesliga' : ''}}">
+						{{league.name}}
+					</div>
+				<span class="fs-back-office-league-part-selecting-league {{(league.id == 1169 || league.id == 1173 || league.id == 1174 || league.id == 1176 || league.id == 1175) ? '' : 'fs-back-office-league-part-selecting-league-disable'}} {{(league.model) ? 'fs-back-office-league-part-league-checked' : ''}}"></span>
+				</div>
+			</div>
+		</div>
+		<div ng-if="error.league" class="fs-back-office-err-for-league-part">
+			<span class="fs-back-office-err-for-league-part-text">
+				Please choose one league
+			</span>
+		</div>
+		<!-- select league part end -->
+		<!-- choose fixtures part start -->
+		<div class="fs-back-office-fixtures-part {{(arrOfMainParts[2].model) ? 'fs-back-office-general-tabs-display' : ''}}">
+			<div class="fs-fixtures-competitions-rounds" ng-if="!loaderFantasyFixtures">
+				<div class="fs-fixtures-content">
+					<label class="fs-parent-item" ng-click="requestAllMaches($event, newObjectForFixtures.id, newObjectForFixtures.checked)">
+						<span class="icon-fantasy-checkbox" ng-class="{'fs-checked' : newObjectForFixtures.checked}"></span>
+						<span>
+							{{newObjectForFixtures.name}}
+						</span>
+					</label>
+					<span class="icon-fantasy-arrowdown" ng-click="triggerDetails($event)"></span>
+					<label class="fs-child-item" ng-repeat="regionOrDate in newObjectForFixtures" ng-click="requestMachesByRound($event, newObjectForFixtures.id, regionOrDate.id);clickingFixturePart(regionOrDate.id)"  ng-if="isSportByRound">
+						<span class="icon-fantasy-checkbox" ng-class="{'fs-checked' : regionOrDate.checked}"></span>
+						<span>
+							round {{regionOrDate.name}}
+						</span>
+					</label>
+					<label class="fs-child-item" ng-repeat="date in newObjectForFixtures" ng-click="requestMachesByDate($event,newObjectForFixtures.id, date.id);clickingFixturePart(date.id)" ng-if="!isSportByRound">
+						<span class="icon-fantasy-checkbox" ng-class="{'fs-checked' : date.checked}"></span>
+						<span>
+							{{date.name | date:'EEEE, d MMMM y'}}
+						</span>
+					</label>
+				</div>
+			</div>
+			<div class="fs-back-office-loader-container" ng-if="loaderFantasyFixtures">
+				<div class="fs-back-office-loader-block">
+					<div class="fs-back-office-loader-circle"></div>
+				</div>
+			</div>
+			<div class="fs-back-office-loader-container-mini" ng-if="loaderFantasyFixturesMini">
+				<div class="fs-back-office-loader-block">
+					<div class="fs-back-office-loader-circle"></div>
+				</div>
+			</div>
+			<div class="fs-fixtures-details" ng-if="!loaderFantasyFixtures && !loaderFantasyFixturesMini && isSportByRound && !noRoundsOrDate">
+				<div ng-repeat="regionOrDate in newObjectForFixtures" ng-if="regionOrDate.isVisible">
+					<div class="fs-fixtures-content" ng-repeat="daysOrMaches in regionOrDate">
+						<label class="fs-parent-item" ng-click="clickingFixturePart(daysOrMaches.id)">
+							<span class="icon-fantasy-checkbox" ng-class="{'fs-checked' : daysOrMaches.checked}"></span>
+							<span>
+								round {{regionOrDate.name}}, {{daysOrMaches.name | date:'EEEE, d MMMM y'}}
+							</span>
+						</label>
+						<span class="icon-fantasy-arrowdown" ng-click="triggerDetails($event)"></span>
+						<label class="fs-child-item" ng-repeat="maches in daysOrMaches" ng-click="clickingFixturePart(maches.id)">
+							<span class="icon-fantasy-checkbox" ng-class="{'fs-checked' : maches.checked}"></span>
+							<span>
+								{{maches.name[0] | date:'HH:mm'}}
+							</span>
+							<span class="fs-home-team">
+								{{maches.name[1]}}
+							</span>
+							<span>
+							 vs {{maches.name[2]}}
+							</span>
+						</label>
+					</div>
+				</div>
+			</div>
+			<div class="fs-fixtures-details"  ng-if="!loaderFantasyFixtures && !loaderFantasyFixturesMini && !isSportByRound && !noRoundsOrDate">
+				<div class="fs-fixtures-content" ng-repeat="date in newObjectForFixtures" ng-if="date.isVisible">
+					<label class="fs-parent-item" ng-click="clickingFixturePart(date.id);date.isVisible = true;" ng-if="date.hasOwnProperty(0)">
+						<span class="icon-fantasy-checkbox" ng-class="{'fs-checked' : date.checked}"></span>
+						<span>
+							{{date.name | date:'EEEE, d MMMM y'}}
+						</span>
+					</label>
+					<span class="icon-fantasy-arrowdown" ng-click="triggerDetails($event)" ng-if="date.hasOwnProperty(0)"></span>
+					<label class="fs-child-item" ng-repeat="maches in date" ng-click="clickingFixturePart(maches.id)">
+						<span class="icon-fantasy-checkbox" ng-class="{'fs-checked' : maches.checked}"></span>
+						<span>
+							{{maches.name[0] | date:'HH:mm'}}
+						</span>
+						<span class="fs-home-team">
+							{{maches.name[1]}}
+						</span>
+						<span>
+							vs {{maches.name[2]}}
+						</span>
+					</label>
+				</div>
+			</div>
+			<div class="fs-fixtures-details"  ng-if="!loaderFantasyFixtures && !loaderFantasyFixturesMini && noRoundsOrDate">
+				<span class="fs-no-fixtures">
+					noFixtures
+				</span>
+			</div>
+		</div>
+		<div ng-if="(error.fixture)" class="fs-back-office-err-for-fixture-part">
+			<span class="fs-back-office-err-for-fixture-text">
+				Please choose at list one match
+			</span>
+		</div>
+		<!-- choose fixtures part end -->
+		<!-- contest details part start -->
+		<div class="fs-back-office-contest-details-part {{(arrOfMainParts[3].model) ? 'fs-back-office-general-tabs-display' : ''}}">
+			<div class="fs-back-office-contest-details-block">
+				<div class="fs-back-office-contest-details-contest-type fs-back-office-contest-details-type">
+					<div class="fs-back-office-contest-details-type-header">
+						contest type
+					</div>
+					<div class="fs-back-office-contest-type-choose-block">
+						<div class="fs-back-office-contest-type-choose fs-back-office-contest-type-choose-type">
+							<div class="fs-back-office-contest-type-choose-line" ng-repeat="item in dataFromSrv.arrContestType" ng-click="choosingOfContestType(item)">
+								<span class="fs-back-office-contest-type-radio-button">
+									<span class="{{(item.model) ? 'fs-back-office-contest-type-radio-button-content' : ''}}"></span>
+								</span>
+								<div class="fs-back-office-contest-details-text">
+									{{item.name}}
+								</div>
+							</div>
+						</div>
+						<div class="fs-back-office-contest-type-choose fs-back-office-contest-type-choose-time">
+							<div class="fs-back-office-contest-type-choose-line" ng-repeat="item in dataFromSrv.arrContestTime">
+								<div class="fs-back-office-contest-details-text" ng-class="{'fs-active' : item.id == chosenDuration}" >
+									{{item.name}}
+								</div>
+							</div>
+						</div>
+						<div class="fs-back-office-contest-type-counter">
+							<span class="fs-back-office-network-contest-input">
+								<span></span>			
+							</span>
+							<div class="fs-back-office-contest-details-text">
+								Counter
+							</div>
+						</div>
+						<div ng-if="(!partnerId)" class="fs-back-office-contest-type-network" ng-click="choosingNetworkContest()">
+							<span class="fs-back-office-network-contest-input">
+								<span ng-if="isNetwork.model" class="fs-back-office-network-contest-input-checked"></span>			
+							</span>
+							<div class="fs-back-office-contest-details-text">
+								Network
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="fs-back-office-contest-details-prize-type fs-back-office-contest-details-type">
+					<div class="fs-back-office-contest-details-type-header">
+						prize type
+					</div>
+					<div class="fs-back-office-contest-details-prize-type-distributed">
+						<div class="fs-back-office-details-distributed-header">
+							<div class="fs-back-office-details-distributed-header-icon-part" ng-click="closeDistributedPart()">
+								<span class="fs-back-office-details-distributed-header-icon"></span>
+							</div>
+							<div class="fs-back-office-details-distributed-header-text">
+								distributed
+							</div>
+						</div>
+						<div class="fs-back-office-contest-details-distributed-body-block">
+							<div class="fs-back-office-details-distributed-body-block-header">
+								<div class="fs-back-office-details-distributed-body-header-parts">
+									Place or range
+								</div>
+								<div class="fs-back-office-details-distributed-body-header-parts">
+									Win percent
+								</div>
+							</div>
+							<div class="fs-back-office-distributed-input-block" ng-repeat="item in arrOfDistributedInputs">
+								<div class="fs-back-office-disributed-part-place-input-container fs-back-office-distributed-input-container">
+									<input type="text" class="{{'fs-back-office-distributed-place-input' + $index}} fs-back-office-distributed-input fs-back-office-distributed-place">
+								</div>
+								<div class="fs-back-office-disributed-part-percent-input-container fs-back-office-distributed-input-container">
+									<input type="number" min="1" class="{{'fs-back-office-distributed-percent-input' + $index}} fs-back-office-distributed-input fs-back-office-distributed-percent">
+								</div>
+							</div>
+							<div class="fs-back-office-contest-type-distributed-error-message"></div>
+						</div>
+						<div class="fs-back-office-contest-details-distributed-buttons-block">
+							<button class="fs-back-office-contest-details-distributed-button fs-medium-button fs-white-success-button" ng-click="addNewInputBlock()">
+								add
+							</button>
+							<button class="fs-back-office-contest-details-distributed-button fs-medium-button fs-white-success-button" ng-click="saveDistributedOptions()">
+								done
+							</button>
+						</div>
+					</div>
+					<div class="fs-back-office-contest-details-prize-block">
+						<div class="fs-back-office-choose-prize-part">
+							<div class="fs-back-office-choose-prize-part-line" ng-click="choosingOfContestPrize(item)" ng-repeat="item in dataFromSrv.arrPrizes">
+								<span class="fs-back-office-contest-type-radio-button">
+									<span class="{{(item.model) ? 'fs-back-office-contest-type-radio-button-content' : ''}}"></span>
+								</span>
+								<div class="fs-back-office-contest-details-text">
+									{{item.name}}
+								</div>
+							</div>
+						</div>
+						<div class="fs-back-office-choose-prize-part-guarnteed" ng-click="settingContestGuaranted()">
+							<span class="fs-back-office-guaranted-contest-input">
+								<span class="{{(contest.guaranteed) ? 'fs-back-office-guaranted-contest-input-checked' : ''}}"></span>
+							</span>
+							<div class="fs-back-office-contest-details-text">
+								Guaranteed
+							</div>
+						</div>
+						<div class="fs-back-office-contest-guaranted-block {{(contest.guaranteed) ? 'fs-back-office-contest-guaranted-block-display' : ''}}">
+							<input type="number" min="1" max="100" class="fs-back-office-contest-guaranted-percent" ng-model="contest.guaranteedPercentage">
+							%
+							<span class="fs-back-office-guaranted-contest-input-edit-icon"></span>
+						</div>
+						<div class="fs-back-office-choose-prize-bonus-part">
+							<div class="fs-back-office-choose-prize-bonus-part-line" ng-repeat="item in dataFromSrv.arrBonusPart">
+								<div class="fs-back-office-choose-prize-bonus-part-header">
+									{{item.name}}
+								</div>
+								<input type="text" disabled="true" placeholder="{{item.placeholder}}">
+							</div>
+						</div>
+					</div>
+					<div class="fs-back-office-prize-block-text-and-image-part" ng-click="choosingPrizeText()">
+						<div class="fs-back-office-prize-part-prize-text">
+							<div class="fs-back-office-prize-part-prize-text-header">
+								Prize text
+							</div>
+							<textarea class="fs-back-office-contest-details-text-area" row='4'/>
+						</div>
+						<div class="fs-back-office-prize-part-prize-image">
+							<div class="fs-back-office-prize-part-prize-text-header">
+								Prize image
+							</div>
+							<input type="file" class="fs-back-office-contest-details-image-upload-input" image-upload>
+							<div class="fs-back-office-contest-details-image-upload-browse-container">
+								<div class="fs-back-office-contest-details-image-upload-icon-circle"></div>
+								<span class="fs-back-office-contest-details-image-upload-icon"></span>
+								<span class="fs-back-office-contest-details-image-upload-recycle" ng-click="deletingUploadedImage()"></span>
+							</div>
+							<span class="fs-back-office-contest-details-image-upload" style="background-image: url({{pathForImage.uploaded}})">
+						</div>
+						<div class="fs-back-office-prize-part-prize-image-name">
+							<div class="fs-back-office-prize-part-prize-text-header">
+								Prize image name
+							</div>
+							<input type="text" ng-model="contest.imageName">
+						</div>
+					</div>
+					<div class="{{(prize.text) ? 'fs-back-office-prize-block-text-and-image' : ''}}"></div>
+				</div>
+				<div class="fs-back-office-contest-details-entry-type fs-back-office-contest-details-type">
+					<div class="fs-back-office-contest-details-type-header">
+						entry type
+					</div>
+					<div class="fs-back-office-contest-entry-part">
+						<div class="fs-back-office-contest-entry-part-line" ng-repeat="item in dataFromSrv.arrContestEntries" ng-click="choosingOfEntryType(item)">
+							<span class="fs-back-office-contest-type-radio-button">
+									<span class="{{(item.model) ? 'fs-back-office-contest-type-radio-button-content' : ''}}"></span>
+								</span>
+							<div class="fs-back-office-contest-details-text">
+								{{item.name}}
+							</div>
+						</div>
+						<div class="fs-back-office-contest-multiple-entry {{(isMultientryForSending == 2) ? 'fs-back-office-contest-multiple-part-visibility' : ''}}">
+							<input type="number" ng-change="selectingUserMaxTeams()" ng-model="multiple.model">
+						</div>
+					</div>
+				</div>
+				<div class="fs-back-office-contest-details-entries-and-prize fs-back-office-contest-details-type">
+					<div class="fs-back-office-contest-details-type-header">
+						entries and prize
+					</div>
+					<div class="fs-back-office-contest-details-entries-and-prize-block">
+						<div class="fs-back-office-entries-and-prizes-input-part">
+							<div class="fs-back-office-contest-details-error-message-of-size {{(error.size) ? 'fs-back-offcie-contest-details-err-size' : ''}}">
+								{{messageForSizeChange}}
+								<div class="fs-back-office-contest-details-error-message-of-size-part">
+								</div>
+							</div>
+							<div class="fs-back-office-entries-and-prizes-input-part-line" ng-repeat="item in dataFromSrv.arrEntriesAndPrize">
+								<div class="fs-back-office-entries-and-prizes-input-part-line-header">
+									{{item.name}}
+								</div>
+
+								<div class="fs-back-office-entries-and-prizes-input-border">
+									<input type="number" class="fs-back-office-create-contest-sizes" ng-model="item.model" ng-readonly="($index == 2)">
+									<div class="fs-back-office-entries-and-prizes-input-support-text">
+										{{item.value}}
+									</div>
+									<div ng-if="($index == 1)" class="fs-back-office-details-auto-calc-button" ng-click="autoCalcPrizefund()">
+										auto
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>			
+		</div>
+		<!-- contest details part end -->
+		<!-- network part start -->
+		<div class="fs-back-office-contest-network-part {{(arrOfMainParts[4].model) ? 'fs-back-office-general-tabs-display' : ''}}">
+			<div class="fs-back-office-contest-network-part-list-block">
+				<div class="fs-back-office-contest-network-part-list-line" ng-repeat="item in allNetworkList">
+					<span class="fs-back-office-network-input-checkbox {{(!item.model) ? 'fs-back-office-network-input-checkbox-available' : ''}}" ng-click="(item.model) ? selectingNetworkFromList(item) : throwErr(item)">
+						<span class="{{(item.available) ? 'fs-back-office-network-input-checkbox-checked' : ''}}"></span>
+					</span>
+					<span class="fs-back-office-contest-network-part-list-text" ng-click="(item.model) ? selectingNetworkFromList(item) : throwErr(item)">
+						{{item.name + '(' + item.id + ')'}}
+					</span>
+					<div class="fs-back-office-network-part-input-block">
+						$<input type="number" class="fs-back-office-network-correction" ng-model="item.correct">
+					</div>
+					<span class="fs-back-office-network-part-correction-send" ng-click="sendingCorrection(item)">
+						<span>
+							ok
+						</span>
+					</span>
+				</div>
+			</div>
+		</div>
+		<!-- network part end -->
+		<div class="fs-back-office-contest-controll-buttons-block">
+			<button class="fs-back-office-contest-buttons fs-medium-button fs-white-success-button" ng-if="flagForDraftButton" ng-click="draftingNewContest()" class="fs-back-office-contest-draft-button">
+				draft
+			</button>
+			<button class="fs-back-office-contest-buttons fs-medium-button fs-white-success-button" ng-click="changingTabByButton($event)">
+				{{nextButton}}
+			</button>
+			<button class="fs-back-office-contest-buttons fs-medium-button fs-white-success-button" ng-click="CancelingCreateContestProcess($event)">
+				cancel
+			</button>
+		</div>
+	</div>
+</div>
+<loader-dir ng-show="loader.show"></loader-dir>
+<err-suc-message-dir ng-show="message.show"></err-suc-message-dir>

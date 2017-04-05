@@ -1,0 +1,24 @@
+$fonts-path: '../../font';
+
+@font-face {
+    font-family: fontRegular;
+    src: url(#{$fonts-path}/Roboto-Regular.ttf),
+         url(#{$fonts-path}/Roboto-Regular.woff),
+         url(#{$fonts-path}/Roboto-Regular.woff2);
+}
+
+@font-face {
+  font-family: fantasy-font;
+  src: url(#{$fonts-path}/fantasy-font.eot);
+  src: url(#{$fonts-path}/fantasy-font.ttf),
+  url(#{$fonts-path}/fantasy-font.woff);
+}
+
+$dark-scheme-brand-color-1: #1a7051;
+$dark-scheme-brand-color-1-light: lighten(saturate($dark-scheme-brand-color-1, 1), 7); // #208c65
+$gradient-color: #121623;
+$dark-scheme-gradient-color-light-2: lighten(desaturate(adjust-hue($gradient-color, -4deg), 18), 19);  // #3f4553
+$light-scheme-gradient-color-light-1: lighten(desaturate(adjust-hue($gradient-color, -2deg), 23), 43);  // #7b8191
+$light-scheme-gradient-color-light-2: lighten(desaturate(adjust-hue($gradient-color, 1deg), 17), 59);   // #a5aabc
+$light-scheme-gradient-color-light-4: lighten(desaturate(adjust-hue($gradient-color, 14deg), 23), 86);  // #f5f5f7
+$light-scheme-gradient-color-light-5: lighten(desaturate(adjust-hue($gradient-color, -226deg), 32), 90); // #ffffff

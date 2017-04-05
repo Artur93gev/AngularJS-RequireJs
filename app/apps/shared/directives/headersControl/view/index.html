@@ -1,0 +1,13 @@
+<div class="fs-back-office-headers-block" ng-click="headersControl.control($event)">
+	<span class="fs-back-office-headers-icon"></span>
+</div>
+<div class="fs-back-office-header-control-block {{(headersControl.flag) ? 'fs-back-office-header-control-block-display' : ''}}" ng-click="$event.stopPropagation()">
+	<div class="fs-back-office-header-control-line" tabindex="{{$index + 1}}" ng-repeat="item in headersControl.list" ng-click="headersControl.check($event, item)" ng-keyPress="headersControl.check($event, item)">
+		<span class="fs-back-office-header-control-input">
+			<span class="{{(item.model) ? 'fs-back-office-header-control-input-checked' : ''}}"></span>
+		</span>
+		<span class="fs-back-office-header-control-text">
+			{{::item.name}}
+		</span>
+	</div>
+</div>

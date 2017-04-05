@@ -1,0 +1,14 @@
+$fonts-path : '../../font';
+
+@font-face {
+    font-family: fontRegular;
+    src: url(#{$fonts-path}/Roboto-Regular.ttf),
+         url(#{$fonts-path}/Roboto-Regular.woff),
+         url(#{$fonts-path}/Roboto-Regular.woff2);
+}
+
+
+$gradient-color: #121623;
+$dark-scheme-gradient-color-light-2: lighten(desaturate(adjust-hue($gradient-color, -4deg), 18), 19);  // #3f4553
+$light-scheme-gradient-color-light-2: lighten(desaturate(adjust-hue($gradient-color, 1deg), 17), 59);   // #a5aabc
+$light-scheme-gradient-color-light-5: lighten(desaturate(adjust-hue($gradient-color, -226deg), 32), 90); // #ffffff

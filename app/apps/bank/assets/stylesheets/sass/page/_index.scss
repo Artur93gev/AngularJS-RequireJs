@@ -1,0 +1,211 @@
+.fs-back-office-bank-part-body-block {
+
+	margin-top : 5px;
+
+	.fs-back-office-bank-part-search-border {
+
+		width 				: 190px;
+		height 				: 35px;
+		margin-left 		: 10px;
+		display 			: inline-block;
+		background-color	: $light-scheme-gradient-color-light-5;
+		border 				: 1px solid $light-scheme-gradient-color-light-3;
+
+		.fs-back-office-bank-part-search-icon {
+
+			font-family 	: fantasy-font;
+			font-size 		: 13px;
+			color			: $light-scheme-gradient-color-light-2;
+			display 		: inline-block;
+			float 			: left;
+			margin-left 	: 10px;
+			margin-top 		: 12px;
+
+			&:before {
+
+				content : 'c';
+			}
+		}
+
+		.fs-back-office-bank-part-search {
+
+			border 		: none;
+			margin-top 	: 2px;
+			text-indent	: 10px;
+			color 		: $light-scheme-gradient-color-light-2;
+			display		: inline-block;
+			width 		: 150px;
+			height 		: 30px;
+		}
+	}
+
+	.fs-back-office-bank-part-search-display {
+
+		display : none;
+	}
+
+	.fs-back-office-bank-part-Essa {
+
+		min-width			: 100px;
+		height 				: 35px;
+		margin-left			: 10px;
+		border 				: none;
+		background-color	: $dark-scheme-brand-color-1-light;
+
+		&:hover {
+
+			opacity : 0.8;
+		}
+	}
+
+	.fs-back-office-bank-part-network-block-display {
+
+		display : none; 
+	}
+
+	.fs-back-office-bank-part-network-block {
+
+		width 				: 99vw;
+		margin-top 			: 10px;
+		background-color 	: white;
+		margin-left 		: 10px;
+
+		.fs-back-office-bank-part-network-header-block {
+
+			width 				: 100%;
+			height 				: 35px;
+			background-color	: #d6d6df;
+
+			.fs-back-office-bank-part-network-header {
+
+				height 				: 100%;
+				width 				: 200px;
+				text-transform		: uppercase;
+				text-align 			: center;
+				color 				: $light-scheme-gradient-color-light-1;
+				background-color 	: $light-scheme-gradient-color-light-5;
+
+				.fs-back-office-bank-part-network-header-text {
+
+					font-family : fontRegular;
+					margin-top 	: 15px;
+					display		: inline-block; 
+				}
+			}
+		}
+
+		.fs-back-office-bank-part-network-content {
+
+			display		: inline-block;
+			margin-top 	: 10px;
+			margin-left : 30px;
+			height		: 210px;
+			overflow-y	: auto; 
+
+			.fs-back-office-bank-part-network-block {
+
+				width 			: 234px;
+				display			: inline-block;
+				margin-left		: 10px;
+				float 			: left;
+				border-right	: 1px solid $light-scheme-gradient-color-light-3;
+
+
+				.fs-back-office-bank-part-network-list-block {
+
+					display			: inline-block;
+					width 			: 100%;
+
+					.fs-back-office-network-block-add-partner {
+
+						min-width			: 50px;
+						max-width			: 50px;
+						height 				: 30px;
+						display 			: block;
+						font-size 			: 12px;
+						border 				: none;
+						background-color	: $dark-scheme-brand-color-1-light;
+
+						&:hover {
+
+							opacity : 0.8;
+						}
+	
+					}
+
+					.fs-back-office-bank-part-networks-list {
+
+						margin-top	: 16px;
+						width 		: 100%;
+						display		: inline-block;
+
+						.fs-back-office-bank-part-networks-partner-line {
+
+							height		: 16px;
+							width 		: 100%;
+							margin-top	: 8px;
+
+							.fs-back-office-bank-part-network-item-checkbox {
+
+								width 	: 16px;
+								height 	: 100%;
+								float 	: left;
+								display : inline-block;
+								color 	: $light-scheme-gradient-color-light-2;
+							}
+
+							.fs-back-office-bank-part-network-item-name {
+
+								float 			: left;
+								font-size		: 16px;
+								margin-left 	: 12px;
+								width 			: 88%;
+								overflow 		: hidden;
+								white-space 	: nowrap;
+								text-overflow	: ellipsis;
+								font-family		: fontRegular;
+								color 			: $light-scheme-gradient-color-light-2;
+							}
+	
+							&:first-child {
+
+								margin-top	: 0px;
+
+								.fs-back-office-bank-part-network-item-name {
+
+									color 	: $light-scheme-gradient-color-light-1;
+								}
+							}
+						}
+					}
+				}
+
+				&:last-child {
+
+					border-right	: none;
+
+					.fs-back-office-network-block-add-partner {
+
+						min-width	: 120px;
+						max-width	: 120px;
+					}
+				} 
+			}
+		}
+
+		.fs-back-office-bank-part-for-reset {
+
+			width 		: 100%;
+			height		: 50px;
+			border-top	: 1px solid $light-scheme-gradient-color-light-3;
+
+			.fs-back-office-bank-part-reset {
+
+				float 		: left;
+				margin-left : 10px;
+				margin-top	: 5px;
+				color 		: $light-scheme-gradient-color-light-3;
+			}
+		}
+	}
+}

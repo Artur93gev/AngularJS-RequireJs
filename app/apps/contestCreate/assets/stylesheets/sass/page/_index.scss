@@ -1,0 +1,2215 @@
+.fs-back-office-body-block {
+
+	width                   : 100%;
+	height                  : 100%;
+	top                     : 0;
+	left                    : 0;
+	position                : fixed;
+	z-index                 : 900;
+	outline                 : 0;
+	background-color        : rgba(18, 22, 35, 0.94);
+	display                 : flex;
+
+	.fs-back-office-contest-block {
+
+		width               : 1220px;
+		height              : 670px;
+		background-color    : $light-scheme-gradient-color-light-5;
+		position            : relative;
+		margin              : 0 auto;
+		top                 : 100px;
+		text-align          : center;
+
+		.fs-back-office-contest-header {
+
+			margin-top      : 25px;
+			width           : 100%;
+			height          : 55px;
+			//border-bottom   : 1px solid $light-scheme-gradient-color-light-4;
+			text-align      : center;
+
+			.fs-back-office-contest-header-text {
+
+				font-size       : 18px;
+				font-family     : fontRegular;
+				display         : inline-block;
+				text-transform  : uppercase;
+				position        : relative;
+				margin          : 0 auto;
+				left            : 40px;
+				color           : $light-scheme-gradient-color-light-3;
+			}
+
+			.fs-back-office-contest-header-icon {
+
+				float           : right;
+				margin-right    : 35px;
+				display         : inline-block;
+				cursor 			: pointer;
+				font-family     : fantasy-font;
+				color           : $light-scheme-gradient-color-light-3;
+
+				&:before {
+
+					content : "b";
+				}
+			}
+		}
+
+		.fs-back-office-contest-menu {
+            font-family: fontRegular;
+			height      : 40px;
+			position    : relative;
+			margin      : 0 auto;
+			top         : -1px;
+			left        : 13px;
+
+			.fs-back-office-contest-menu-general,
+			.fs-back-office-contest-menu-league,
+			.fs-back-office-contest-menu-fixture,
+			.fs-back-office-contest-menu-details,
+			.fs-back-office-contest-network-details {
+
+				height          : 100%;
+				cursor          : pointer;
+				display         : inline-block;
+				text-transform  : capitalize;
+				text-align      : center;
+				box-sizing      : border-box;
+				color           : $light-scheme-gradient-color-light-1;
+				font-family     : fontRegular;
+				font-size       : 14px;
+				border          : 1px solid #e0e0e2;
+				.fs-back-office-contest-menu-text {
+
+					margin-top  : 10px;
+					cursor      : pointer;
+				}
+
+				&:hover {
+
+					background-color    : $dark-scheme-brand-color-5;
+					margin-bottom       : 1px;
+					color               : $light-scheme-gradient-color-light-4;
+					@include transition(0.2s);
+				}
+			}
+
+			.fs-back-office-contest-menu-active {
+
+				background-color 	: $dark-scheme-brand-color-5;
+				color               : $light-scheme-gradient-color-light-4;
+			}
+
+			.fs-back-office-contest-menu-general {
+
+				width               : 95px;
+				margin-right        : -1px;
+			}
+
+			.fs-back-office-contest-menu-league {
+
+				width           : 135px;
+				margin-right    : -1px;
+			}
+
+			.fs-back-office-contest-menu-fixture {
+
+				width           : 150px;
+				margin-right    : -1px;
+			}
+
+			.fs-back-office-contest-menu-details {
+
+				width : 145px;
+			}
+
+			.fs-back-office-contest-network-details {
+
+				width 		: 145px;
+				margin-left	: -1px;
+			}
+		}
+
+		input[type="checkbox"] {
+
+			display : inline-block;
+			cursor  : pointer;
+			outline : none;
+			color   : #737888;
+			height  : 16px;
+			width   : 16px;
+		}
+
+		input[type="radio"] {
+
+			display : inline-block;
+			cursor  : pointer;
+			height  : 16px;
+			outline : none;
+			width   : 16px;
+			float   : left;
+		}
+
+		//general start
+
+		.fs-back-office-general-part {
+
+			width       : 100%;
+			height      : 295px;
+			position    : relative;
+			margin      : 0 auto;
+			top         : 85px;
+			display     : none;
+			text-align  : center;
+
+			.fs-back-office-general-drop-down {
+
+				width   : 100%;
+				height  : 35px;
+				cursor  : pointer;
+				border  : 1px solid $light-scheme-gradient-color-light-3;
+
+				.fs-back-office-general-chosen-part {
+
+					display     : inline-block;
+					position    : absolute;
+					margin-top  : 7px;
+					color       : $dark-scheme-gradient-color-light-2;
+					left        : 10px;
+				}
+
+				.fs-back-office-arrow-down {
+
+					font-family     : fantasy-font;
+					font-size       : 12px;
+					float           : right;
+					margin-right    : 15px;
+					cursor          : pointer;
+					display         : inline-block;
+					margin-top      : 13px;
+					color           : #acaeb5;
+
+					&:before {
+
+						content : 'd';
+					}
+				}
+
+				.fs-back-office-drop-down-list {
+
+					display             : none;
+					width               : 100%;
+					height              : 100px;
+					margin-left         : -1px;
+					top                 : 73px;
+					position            : absolute;
+					z-index             : 1;
+					background-color    : $light-scheme-gradient-color-light-5;
+					overflow-x          : hidden;
+					border              : 1px solid $light-scheme-gradient-color-light-3;
+
+					div {
+
+						width           : 100%;
+						text-align      : center;
+						border-bottom   : 1px solid $light-scheme-gradient-color-light-4;
+						cursor          : pointer;
+						height          : 40px;
+
+						a {
+
+							display: inline-block;
+							margin-top: 10px;
+							color : #373741;
+						}
+
+						&:hover {
+
+							background-color : $dark-scheme-brand-color-5;
+
+							a {
+
+								color : white;
+							}
+						}
+					}
+				}
+
+				.fs-back-office-sports-list {
+
+					top     : 73px;
+
+					div {
+
+						background-color    : $light-scheme-gradient-color-light-5;
+
+						&:last-child {
+
+							background-color    : $light-scheme-gradient-color-light-3;
+
+							&:hover {
+
+								background-color    : $dark-scheme-brand-color-5;
+							}
+						}
+					}
+
+				}
+
+				.fs-back-office-networks-list {
+
+					top : 197px;
+
+					input, a {
+
+						float : left;
+						margin-left : 10px;
+					}
+
+					input {
+
+						margin-top  : 13px;
+						display: none;
+					}
+
+					.fs-back-office-network-checkbox {
+
+						width       : 16px;
+						height      : 16px;
+						border      : 1px solid #737888;
+						cursor      : pointer;
+						float       : left;
+						margin-left : 10px;
+						margin-top  : 10px;
+						font-size   : 12px;
+						display     : inline-block;
+						font-family : fantasy-font;
+
+						.fs-back-office-create-contest-network-checkbox {
+
+							&:before {
+
+								color   : #787d8d;
+								content : 'n';
+							}
+						}
+					}
+				}
+
+				.fs-back-office-privacy-list {
+
+					top     : 197px;
+					height  : 82px;
+
+				}
+			}
+
+			.fs-back-office-general-drop-down-err {
+
+				border-color 	: $dark-scheme-brand-color-6;
+			}
+
+			.fs-back-office-general-input-for-err-password {
+
+				border-color	: $dark-scheme-brand-color-6;
+			}
+
+			.fs-back-office-general-input-container {
+
+				width       : 228px;
+				height      : 100%;
+				position    : relative;
+				margin      : 0 auto;
+				display     : inline-block;
+				left        : 15px;
+
+				.fs-back-office-general-input-block {
+
+					height      : 44px;
+					width       : 100%;
+					margin-top  : 18px;
+					text-align  : left;
+
+					.fs-back-office-general-input-header {
+
+						font-size     : 14px;
+						display       : inline-block;
+						color         : $light-scheme-gradient-color-light-2;
+						margin-bottom : 5px;
+					}
+
+					.fs-back-office-general-input {
+
+						outline     : none;
+						text-indent : 10px;
+						width       : 99%;
+						height      : 30px;
+						border      : none;
+						color       : $dark-scheme-gradient-color-light-2;
+
+					}
+
+					&:last-child {
+
+						display : none;
+
+						.fs-back-office-general-input {
+
+							letter-spacing  : 4px;
+							font-size       : 24px;
+						}
+					}
+				}
+			}
+		}
+
+		.fs-back-office-err-for-contest-name-block {
+
+			display		: inline-block;
+			position	: absolute;
+			width       : 210px;
+			height      : 20px;
+			text-align 	: left;
+			left 		: 250px;
+			top 		: 110px;
+
+			.fs-back-office-err-for-contest-name-text {
+
+				font-family	: fontRegular;
+				font-size 	: 12px;
+				color 		: $dark-scheme-brand-color-6;
+			}
+		}
+
+		.fs-back-office-err-for-contest-password-block {
+
+			display		: inline-block;
+			position	: absolute;
+			width       : 210px;
+			height      : 20px;
+			text-align 	: left;
+			left 		: 250px;
+			top 		: 230px;
+
+			.fs-back-office-err-for-contest-password-text {
+
+				font-family	: fontRegular;
+				font-size 	: 12px;
+				color 		: $dark-scheme-brand-color-6;
+			}
+		}
+
+		.fs-back-office-general-pass-display {
+
+			display : inline-block !important;
+		}
+
+		//general end
+
+		//select league start
+
+		.fs-back-office-err-for-league-part {
+
+			width 		: 100%;
+			height 		: 25px;
+			display		: inline-block;
+			position	: relative;
+			text-align	: center;
+			top 		: 70px;
+			margin-top 	: 5px;
+
+			.fs-back-office-err-for-league-part-text {
+
+				font-family	: fontRegular;
+				font-size 	: 14px;
+				color 		: $dark-scheme-brand-color-6;
+			}
+		}
+
+		.fs-back-office-select-league-part {
+
+			width       : 1050px;
+			height      : 370px;
+			position    : relative;
+			margin      : 0 auto;
+			top         : 75px;
+			right       : 65px;
+			float       : right;
+			display     : none;
+			text-align  : center;
+			overflow-y  : auto;
+
+			input[type = "checkbox"] {
+
+				margin-top  : 10px;
+				float       : right;
+				border      : none;
+			}
+
+
+			.fs-back-office-select-league-list {
+
+				width       : 1005px;
+				display     : inline-block;
+				margin      : 0 auto;
+
+				.fs-back-office-select-league-header {
+
+					width               : 1006px;
+					height              : 30px;
+					background-color    : $light-scheme-gradient-color-light-4;
+					color               : $light-scheme-gradient-color-light-1;
+					position            : relative;
+					margin              : 0 auto;
+					top                 : 30px;
+					text-align          : left;
+
+					div {
+
+						margin-left     : 20px;
+						margin-top      : 6px;
+						display         : inline-block;
+						font-size       : 12px;
+						text-transform  : capitalize;
+					}
+
+				}
+
+				.fs-back-office-select-league-list-item {
+
+					width           : 470px;
+					height          : 43px;
+					position        : relative;
+					padding-top     : 10px;
+					top             : 25px;
+					cursor          : pointer;
+					display         : inline-block;
+					border-bottom   : 1px solid $light-scheme-gradient-color-light-1;
+
+					&:nth-child(even) {
+
+						float       : left;
+						margin-left : 20px;
+					}
+
+					&:nth-child(odd) {
+
+						float       : right;
+					}
+
+					.fs-back-office-league-part-selecting-league {
+
+						display		: inline-block;
+						width 		: 16px;
+						height 		: 16px;
+						cursor 		: pointer;
+						font-family : fantasy-font;
+						color 		: $light-scheme-gradient-color-light-2;
+						float 		: right;
+						margin-top 	: 8px;
+						font-size 	: 13px;
+						border 		: 1px solid $light-scheme-gradient-color-light-2;
+						box-sizing  : border-box;
+
+					}
+
+					.fs-back-office-league-part-selecting-league-disable {
+
+						background-color 	: $dark-scheme-body-color;
+					}
+
+					.fs-back-office-league-part-league-checked {
+
+						&:before {
+							font-size 	: 12px;
+							content 	: 'n';
+							display 	: inline-block;
+							margin-top	: 1px;
+						}
+					}
+
+					a {
+
+						width       : 16px;
+						height      : 16px;
+						cursor      : pointer;
+						border      : 1px solid grey;
+						box-sizing  : border-box;
+					}
+
+					&:hover {
+
+						.fs-back-office-example  {
+
+							display : inline-block;
+						}
+					}
+
+					.fs-back-office-select-league1164,
+					.fs-back-office-select-league1165,
+					.fs-back-office-select-league1166,
+					.fs-back-office-select-league1167,
+					.fs-back-office-select-league1169,
+					.fs-back-office-select-league1209,
+					.fs-back-office-select-league1211 {
+
+						display             : none;
+						width               : 250px;
+						height              : 30px;
+						top                 : -30px;
+						right               : 60px;
+						background-color    : $light-scheme-gradient-color-light-3;
+						color               : black;
+						position            : absolute;
+
+					}
+					.fs-back-office-select-league-message-part1164,
+					.fs-back-office-select-league-message-part1165,
+					.fs-back-office-select-league-message-part1166,
+					.fs-back-office-select-league-message-part1167,
+					.fs-back-office-select-league-message-part1169,
+					.fs-back-office-select-league-message-part1209,
+					.fs-back-office-select-league-message-part1211 {
+
+						display             : none;
+						position            : absolute;
+						width               : 15px;
+						height              : 15px;
+						z-index             : 1;
+						color               : black;
+						top                 : -6px;
+						right               : 170px;
+						transform           : rotate(45deg);
+						background-color    : $light-scheme-gradient-color-light-3;
+						border-top          : none;
+						border-left         : none;
+					}
+
+					.fs-back-office-select-league-list-item-icon {
+
+						font-family : fantasy-font;
+						font-size   : 12px;
+						margin-top  : 10px;
+						cursor      : pointer;
+						float       : left;
+						color       : $light-scheme-gradient-color-light-1;
+					}
+
+					.icon1164 {
+
+						&:before {
+
+							font-size 	: 48px;
+							display 	: inline-block;
+							margin-top 	: -18px;
+							margin-left : -10px;
+							content 	: '\e008';
+						}
+					}
+					.icon1166 {
+
+						&:before {
+
+							content 	: "'";
+							font-size 	: 20px;
+						}
+					}
+					.icon1167 {
+
+						&:before {
+
+							content 	: '(';
+							display 	: inline-block;
+							font-size 	: 24px;
+							margin-left	: 3px;
+							margin-top 	: -6px;
+						}
+					}
+					.icon1169 {
+
+						&:before {
+
+							content 	: '&';
+							font-size 	: 24px;
+							display 	: inline-block;
+							margin-top	: -5px;
+						}
+					}
+					.icon1211 {
+
+						&:before {
+
+							content : '1';
+						}
+					}
+
+					div {
+
+						font-family : fontRegular;
+						font-size   : 12px;
+						margin-top  : 10px;
+						float       : left;
+						cursor      : pointer;
+						margin-left : 20px;
+						color       : $light-scheme-gradient-color-light-1;
+						display     : inline-block;
+
+					}
+
+					.fs-back-office-bundesliga {
+
+						margin-left : 6px;
+					}
+					&.fs-back-office-select-league-list-item-disabled {
+						.fs-back-office-select-league-list-item-icon{
+							opacity : 0.5;
+						}
+                        div {
+                            opacity : 0.5;
+                        }
+					}
+				}
+			}
+		}
+
+		//select league end
+
+		//choose fixtures start
+
+		.fs-back-office-fixtures-part {
+
+			display     : none;
+			width       : 100%;
+			height      : 440px;
+			margin-top  : 25px;
+			text-align  : left;
+
+			.fs-back-office-loader-container {
+				width: 100%;
+				height: 470px;
+				position: absolute;
+				top: 120px;
+				left: 0px;
+				background-color:  $light-scheme-gradient-color-light-5;
+			}
+
+			.fs-back-office-loader-container-mini {
+				width: calc(67% - 30px);
+				height: 470px;
+				position: absolute;
+				top: 120px;
+				right: 0px;
+				background-color:  $light-scheme-gradient-color-light-5;
+			}
+
+
+				.icon-fantasy-arrowdown {
+					float: right;
+					background-color: $light-scheme-gradient-color-light-4;
+					width: 60%;
+					height: 30px;
+					color: $light-scheme-gradient-color-light-3;
+					line-height: 34px;
+					padding-left: 55%;
+					cursor: pointer;
+					box-sizing: border-box;
+					font-size: 14px;
+
+					&:hover{
+						color: $light-scheme-gradient-color-light-2;
+					}
+				}
+
+			    .fs-fixtures-competitions-rounds {
+					width: 33%;
+					height: 440px;
+					float: left;
+					background-color: $light-scheme-gradient-color-light-5;
+					box-sizing: border-box;
+					overflow-y: auto;
+					box-sizing: border-box;
+					border: 1px solid $light-scheme-gradient-color-light-4;
+					margin: 0 0 0 10px;
+
+					.icon-fantasy-arrowdown {
+						padding-left: 50%;
+					}
+				}
+
+				.fs-fixtures-details {
+					position: relative;
+					width: calc(67% - 30px);
+					height: 440px;
+					float: left;
+					margin: 0 10px;
+					background-color: $light-scheme-gradient-color-light-5;
+					overflow-y: auto;
+					box-sizing: border-box;
+					border: 1px solid $light-scheme-gradient-color-light-4;
+
+					.fs-no-fixtures {
+						color: $light-scheme-gradient-color-light-5;
+						font-size: 16px;
+						text-align: center;
+						margin: 200px auto;
+						display: block;
+						text-transform: capitalize;
+					}
+				}
+
+				.fs-fixtures-content {
+					width: 100%;
+					height: auto;
+					position: relative;
+					background-color: $light-scheme-gradient-color-light-5;
+					clear: both;
+					float: left;
+					overflow: hidden;
+
+					.fs-parent-item {
+						width: 40%;
+						height: 30px;
+						float: left;
+						background-color: $light-scheme-gradient-color-light-4;
+						margin-bottom: 0;
+						padding: 0 15px;
+						box-sizing: border-box;
+						color: $light-scheme-gradient-color-light-1;
+						font-size: 14px;
+						font-family: fontRegular;
+						line-height: 30px;
+						text-transform: capitalize;
+						text-overflow: ellipsis;
+						white-space: nowrap;
+						overflow: hidden;
+
+						.icon-fantasy-checkbox {
+							margin: 6px 10px 0 0;
+						}
+					}
+
+					.fs-child-item {
+						background-color: $light-scheme-gradient-color-light-5;
+						width: calc(100% - 35px);
+						height: 34px;
+						float: left;
+						margin: 0 15px;
+						border-bottom: 1px solid $light-scheme-gradient-color-light-4;
+						color: $light-scheme-gradient-color-light-1;
+						font-size: 12px;
+						font-family: fontRegular;
+						line-height: 40px;
+
+						&:hover {
+							background-color: rgba($light-scheme-gradient-color-light-3, 0.3);
+							width: calc(100% - 35px);
+							padding-left: 15px;
+							padding-right: 25px;
+							border-top: 1px solid $light-scheme-gradient-color-light-4;
+							margin: -1px 0 0 0;
+							color:  $light-scheme-gradient-color-light-2;
+
+							.fs-home-team {
+								color: $light-scheme-gradient-color-light-3;
+							}
+
+							.icon-fantasy-checkbox {
+								border: 1px solid $light-scheme-gradient-color-light-2;
+
+								&:before {
+									color: $light-scheme-gradient-color-light-2;
+								}
+							}
+						}
+
+						&:last-child {
+							border-bottom: none;
+						}
+					}
+
+					.icon-fantasy-checkbox {
+						margin: 9px 10px 0 0;
+						width: 16px;
+						height: 16px;
+						cursor: pointer;
+						color: $light-scheme-gradient-color-light-4;
+						font-size: 13px;
+						border: 1px solid $light-scheme-gradient-color-light-3;
+						display: inline-block;
+						line-height: 16px;
+						float: left;
+
+						&.fs-checked:before {
+							font-family: fantasy-font;
+							display: block;
+							position: absolute;
+							text-align: center;
+							color: $light-scheme-gradient-color-light-3;
+							font-size: 12px;
+							line-height: 16px;
+							width: 16px;
+						}
+					}
+
+					.fs-home-team {
+						color: $light-scheme-gradient-color-light-3;
+					}
+
+					&:last-child {
+						border-bottom: none;
+					}
+
+
+					&.fs-toZero {
+						height: 31px;
+						@include transition(0.2s);
+
+						.icon-fantasy-arrowdown {
+							&:hover{
+								color: $light-scheme-gradient-color-light-2;
+							}
+
+							&:before {
+								transform: rotate(-180deg);
+								display: inline-block;
+							}
+						}
+
+					}
+				}
+
+				//.fs-back-office-fixtures-round-and-league-block {
+                //
+				//	width       : 1005px;
+				//	height      : 35px;
+				//	margin-top  : 30px;
+				//	display     : inline-block;
+                //
+				//	.fs-back-office-fixtures-round-block {
+                //
+				//		width       : 230px;
+				//		height      : 100%;
+				//		display     : inline-block;
+				//		float       : left;
+				//		position    : relative;
+				//		text-align  : center;
+				//		cursor      : pointer;
+				//		border      : 1px solid $light-scheme-gradient-color-light-3;
+                //
+				//		div {
+                //
+				//			margin-top      : 5px;
+				//			color           : $dark-scheme-gradient-color-light-2;
+				//			float           : left;
+				//			margin-left     : 10px;
+				//			cursor 			: pointer;
+				//			text-transform  : capitalize;
+				//		}
+                //
+				//		.fs-back-office-arrow-down-for-rounds {
+                //
+				//			font-family     : fantasy-font;
+				//			font-size       : 12px;
+				//			float           : right;
+				//			margin-right    : 15px;
+				//			cursor          : pointer;
+				//			display         : inline-block;
+				//			margin-top      : 13px;
+				//			color           : #acaeb5;
+                //
+				//			&:before {
+                //
+				//				content : 'd';
+				//			}
+				//		}
+                //
+				//		.fs-back-office-drop-down-round-list {
+                //
+				//			display             : none;
+				//			width               : 100%;
+				//			height              : 150px;
+				//			margin-left         : -1px;
+				//			top                 : 73px;
+				//			background-color    : $light-scheme-gradient-color-light-5;
+				//			overflow            : scroll;
+				//			overflow-x          : hidden;
+				//			border              : 1px solid $light-scheme-gradient-color-light-3;
+                //
+				//			div {
+                //
+				//				width           : 100%;
+				//				text-align      : center;
+				//				border-bottom   : 1px solid $light-scheme-gradient-color-light-4;
+				//				cursor          : pointer;
+				//				height          : 40px;
+				//				margin-left     : 0px;
+                //
+				//				.fs-back-office-fixture-part-custom-and-full-seasons {
+                //
+				//					float       : left;
+				//					display : none;
+				//					&.checked {
+				//						background: red;
+				//						& + label:before {
+				//							font-size: 12px;
+				//							content: 'n';
+				//							display: inline-block;
+				//							margin-top: 1px;
+                //
+                //
+				//						}
+				//					}
+				//					&:checked {
+				//						background: red;
+				//						& + label:before {
+				//							font-size: 12px;
+				//							content: 'n';
+				//							display: inline-block;
+				//							margin-top: 1px;
+                //
+                //
+				//						}
+				//					}
+				//				}
+				//				span, label {
+				//					display             : inline-block;
+				//					width               : 16px;
+				//					height              : 16px;
+				//					cursor              : pointer;
+				//					font-family         : fantasy-font;
+				//					color               : #a5aabd;
+				//					float               : left;
+				//					font-size           : 13px;
+				//					border              : 1px solid #a5aabd;
+				//					-webkit-box-sizing  : border-box;
+				//					-moz-box-sizing     : border-box;
+				//					box-sizing          : border-box;
+				//					margin-left         : 10px;
+				//					margin-top          : 12px;
+				//					text-transform      : none;
+                //
+                //
+				//				}
+				//				a {
+				//					font-family : fontRegular;
+				//					display     : inline-block;
+				//					margin-top  : 10px;
+				//					width       : 180px;
+				//					height      : 30px;
+				//					cursor 		: pointer;
+				//					text-align  : left;
+				//					color       : #373741;
+				//				}
+                //
+                //
+				//				&:hover {
+                //
+				//					background-color : $dark-scheme-brand-color-5;
+                //
+				//					a {
+                //
+				//						color : white;
+				//					}
+				//				}
+				//			}
+				//		}
+				//	}
+                //
+				//	.fs-back-office-fixtures-league-block {
+                //
+				//		width   : 740px;
+				//		height  : 100%;
+				//		display : inline-block;
+				//		float   : right;
+                //
+				//		.fs-back-office-league-part {
+                //
+				//			width           : 625px;
+				//			height          : 100%;
+				//			display         : inline-block;
+				//			text-align      : center;
+				//			border-bottom   : 1px solid $light-scheme-gradient-color-light-3;
+                //
+				//			.fs-back-office-league-part-choosen-leagues {
+                //
+				//				width           : 120px;
+				//				height          : 29px;
+				//				font-family     : fontRegular;
+				//				font-size       : 12px;
+				//				color           : $light-scheme-gradient-color-light-2;
+				//				text-align      : center;
+				//				display         : inline-block;
+				//				cursor          : pointer;
+                //
+				//				&:first-child {
+                //
+				//					border-bottom   : 2px solid $dark-scheme-brand-color-5;
+				//					color           : $dark-scheme-gradient-color-light-2;
+				//					font-family     : fontRegular;
+				//				}
+				//			}
+				//		}
+                //
+				//		.fs-back-office-league-block-arrows-block {
+                //
+				//			width               : 30px;
+				//			display             : inline-block;
+				//			background-color    : #f9f9fa;
+				//			height              : 35px;
+				//			cursor              : pointer;
+                //
+				//			span {
+                //
+				//				font-family : fantasy-font;
+				//				font-size   : 12px;
+				//				display     : inline-block;
+				//				margin-top  : 13px;
+				//				color       : #828897;
+				//			}
+                //
+				//			&:first-child {
+                //
+				//				float       : left;
+				//				transform   : rotate(90deg);
+                //
+				//				span {
+                //
+				//					&:before {
+                //
+				//						content : 'd';
+				//					}
+				//				}
+				//			}
+				//			&:last-child {
+                //
+				//				float       : right;
+				//				transform   : rotate(270deg);
+                //
+				//				span {
+                //
+				//					&:before {
+                //
+				//						content : 'd';
+				//					}
+				//				}
+				//			}
+				//		}
+				//	}
+				//}
+                //
+				//.fs-back-office-fixtures-custom-rounds {
+                //
+				//	width       : 1005px;
+				//	height      : 325px;
+				//	margin-top  : 8px;
+				//	overflow-y 	: auto;
+				//	display     : inline-block;
+                //
+				//	.fs-back-office-fixtures-round-day {
+                //
+				//		width   : 100%;
+				//		display : inline-block;
+                //
+				//		.fs-back-office-fixtures-round-day-line {
+                //
+				//			width               : 100%;
+				//			height              : 30px;
+				//			display             : inline-block;
+				//			background-color    : #f9f9fa;
+                //
+				//			label {
+				//				display             : inline-block;
+				//				width               : 16px;
+				//				height              : 16px;
+				//				cursor              : pointer;
+				//				font-family         : fantasy-font;
+				//				color               : #a5aabd;
+				//				float               : left;
+				//				font-size           : 13px;
+				//				border              : 1px solid #a5aabd;
+				//				-webkit-box-sizing  : border-box;
+				//				-moz-box-sizing     : border-box;
+				//				box-sizing          : border-box;
+				//			}
+                //
+                //
+				//			input {
+				//				display : none;
+				//				float   : left;
+				//				&:checked {
+				//					& + label:before {
+				//						font-size: 12px;
+				//						content: 'n';
+				//						display: inline-block;
+				//						margin-top: 1px;
+                //
+				//					}
+				//				}
+                //
+				//			}
+                //
+				//			.fs-back-office-fixture-part-round-date {
+                //
+				//				float           : left;
+				//				margin-left     : 15px;
+				//				font-family     : fontRegular;
+				//				font-size       : 12px;
+				//				text-transform  : capitalize;
+				//				color           : $light-scheme-gradient-color-light-1;
+				//			}
+                //
+				//			span {
+                //
+				//				float           : right;
+				//				font-size       : 12px;
+				//				margin-right    : 5px;
+				//				margin-top      : 10px;
+				//				cursor          : pointer;
+				//				font-family     : fantasy-font;
+				//				color           : #828897;
+                //
+				//				&:before {
+                //
+				//					content : 'd';
+				//				}
+				//			}
+				//		}
+                //
+				//		.fs-back-office-fixtures-round-day-matches {
+                //
+				//			height  : 34px;
+				//			width   : 100%;
+				//			display : inline-block;
+                //
+				//			label {
+				//				display             : inline-block;
+				//				width               : 16px;
+				//				height              : 16px;
+				//				cursor              : pointer;
+				//				font-family         : fantasy-font;
+				//				color               : #a5aabd;
+				//				float               : left;
+				//				font-size           : 13px;
+				//				border              : 1px solid #a5aabd;
+				//				-webkit-box-sizing  : border-box;
+				//				-moz-box-sizing     : border-box;
+				//				box-sizing          : border-box;
+				//			}
+                //
+				//			input {
+				//				display : none;
+				//				float   : left;
+				//				&:checked {
+				//					& + label:before {
+				//						font-size: 12px;
+				//						content: 'n';
+				//						display: inline-block;
+				//						margin-top: 1px;
+                //
+				//					}
+				//				}
+                //
+				//			}
+                //
+				//			div {
+                //
+				//				color       : $dark-scheme-gradient-color-light-2;
+				//				font-family : fontRegular;
+				//				font-size   : 14px;
+				//				float       : left;
+				//				margin-left : 10px;
+				//			}
+				//		}
+				//	}
+				//}
+		}
+
+		.fs-back-office-err-for-fixture-part {
+
+			position	: relative;
+			display		: inline-block;
+			width		: 100%;
+			height 		: 25px;
+			text-align 	: center;
+
+			.fs-back-office-err-for-fixture-text {
+
+				font-family	: fontRegular;
+				font-size 	: 14px;
+				color 		: $dark-scheme-brand-color-6;
+			}
+		}
+
+		//choose fixtures end
+
+		//contest details start
+
+		.fs-back-office-contest-details-part {
+
+			width       : 100%;
+			height      : 390px;
+			display     : none;
+			position    : relative;
+			margin      : 0 auto;
+			top         : 70px;
+
+			input[type = "checkbox"] {
+
+				float : left;
+			}
+
+			.fs-back-office-contest-type-radio-button {
+
+				width 				: 16px;
+				height 				: 16px;
+				border-radius 		: 8px;
+				float 				: left;
+				display				: inline-block;
+				border 				: 1px solid $light-scheme-gradient-color-light-3;
+				text-align 			: center;
+				background-color	: $light-scheme-gradient-color-light-5;
+				box-sizing			: border-box;
+
+				.fs-back-office-contest-type-radio-button-content {
+
+					width 				: 6px;
+					height 				: 6px;
+					border-radius		: 3px;
+					display				: inline-block;
+					margin-bottom		: 4px;
+					background-color	: $light-scheme-gradient-color-light-1;
+				}
+			}
+
+			.fs-back-office-contest-details-text {
+
+				float       : left;
+				margin-top  : 1px;
+				margin-left  : 10px;
+				color       : $dark-scheme-gradient-color-light-2;
+				font-size   : 12px;
+				cursor      : pointer;
+				font-family : fontRegular;
+				display     : inline-block;
+			}
+
+			.fs-back-office-contest-details-block {
+
+				width       : 1092px;
+				height      : 100%;
+				position    : relative;
+				margin      : 0 auto;
+
+				.fs-back-office-contest-details-type {
+
+					height          : 100%;
+					display         : inline-block;
+					border-right    : 1px solid #e0e0e2;
+					float           : left;
+
+					.fs-back-office-contest-details-type-header {
+
+						font-size       : 12px;
+						float           : left;
+						text-transform  : uppercase;
+						font-family     : fontRegular;
+						display         : inline-block;
+						margin-left     : 20px;
+						color           : $light-scheme-gradient-color-light-2;
+					}
+				}
+
+				.fs-back-office-contest-details-contest-type {
+
+					width   : 110px;
+
+					.fs-back-office-contest-details-type-header {
+
+						margin-left : 0px;
+					}
+
+					.fs-back-office-contest-type-choose-block {
+
+						height      : 220px;
+						width       : 100%;
+						display     : inline-block;
+						margin-top  : 10px;
+
+						.fs-back-office-contest-type-choose {
+
+							width   : 100%;
+							display : inline-block;
+							float   : left;
+
+							.fs-back-office-contest-type-choose-line {
+
+								height  : 20px;
+								width   : 100%;
+								display : inline-block;
+
+								&:not(:nth-child(1)) {
+									margin-top: 5px;
+								}
+
+							}
+						}
+
+						.fs-back-office-contest-type-choose-time {
+
+							margin-top  : 20px;
+
+							.fs-back-office-contest-details-text {
+								margin-left: 0;
+								color       : rgba($dark-scheme-gradient-color-light-2, 0.5);
+
+								&.fs-active {
+									color       : $dark-scheme-gradient-color-light-2;
+								}
+							}
+						}
+
+						.fs-back-office-contest-type-counter,
+						.fs-back-office-contest-type-network {
+
+							margin-top  : 20px;
+							width       : 100%;
+							height      : 16px;
+							display     : inline-block;
+
+							.fs-back-office-contest-details-text {
+
+								margin-top 	: 3px;
+							}
+						}
+
+						.fs-back-office-network-contest-input {
+
+							width 		: 16px;
+							height		: 16px;
+							float 		: left;
+							color 		: $light-scheme-gradient-color-light-2;
+							font-family : fantasy-font;
+							cursor 		: pointer;
+							font-size 	: 13px;
+							box-sizing	: border-box;
+							border 		: 1px solid $light-scheme-gradient-color-light-2;
+
+							.fs-back-office-network-contest-input-checked {
+
+								&:before {
+
+									content 	: 'n';
+									display		: inline-block;
+									margin-top 	: 1px;
+								}
+							}
+						}
+					}
+				}
+
+				.fs-back-office-contest-details-prize-type {
+
+					width   : 560px;
+
+					.fs-back-office-contest-details-type-header {
+
+						width       : 350px;
+						text-align  : left;
+					}
+
+					.fs-back-office-contest-details-prize-block {
+
+						width       : 230px;
+						height      : 350px;
+						float       : left;
+						margin-left : 20px;
+						display     : inline-block;
+						margin-top  : 10px;
+
+						.fs-back-office-choose-prize-part {
+
+							width   : 100%;
+							display : inline-block;
+
+							.fs-back-office-choose-prize-part-line {
+
+								width       : 100%;
+								height      : 20px;
+								margin-top  : 5px;
+
+								&:first-child {
+
+									margin-top : 0px;
+								}
+							}
+						}
+
+						.fs-back-office-contest-guaranted-block {
+
+							border 		: 1px solid $light-scheme-gradient-color-light-2;
+							width 		: 82px;
+							height		: 20px;
+							float 		: left;
+							margin-top	: 15px;
+							display 	: none;
+
+							.fs-back-office-contest-guaranted-percent {
+
+								width 		: 50px;
+								display 	: inline-block;
+								text-indent : 10px;
+								border 		: none;
+								float 		: left;
+							}
+
+							.fs-back-office-guaranted-contest-input-edit-icon {
+
+								font-family	: fantasy-font;
+								color 		: $light-scheme-gradient-color-light-2;
+								float 	 	: right;
+
+								&:before {
+
+									content : 'y';
+								}
+							}
+						}
+
+						.fs-back-office-contest-guaranted-block-display {
+
+							display : inline-block;
+						}
+
+						.fs-back-office-choose-prize-part-guarnteed {
+
+							margin-top  : 20px;
+							display 	: inline-block;
+							width 		: 100%;
+							float 		: left;
+
+							.fs-back-office-guaranted-contest-input {
+
+								width 		: 16px;
+								height		: 16px;
+								float 		: left;
+								color 		: $light-scheme-gradient-color-light-2;
+								font-family : fantasy-font;
+								cursor 		: pointer;
+								font-size 	: 13px;
+								box-sizing	: border-box;
+								border 		: 1px solid $light-scheme-gradient-color-light-2;
+
+								.fs-back-office-guaranted-contest-input-checked {
+
+									&:before {
+
+										content 	: 'n';
+										display		: inline-block;
+										margin-top 	: 1px;
+									}
+								}
+							}
+						}
+
+						.fs-back-office-choose-prize-bonus-part {
+
+							width       : 100%;
+							height      : 170px;
+							display     : inline-block;
+							margin-top  : 20px;
+
+							.fs-back-office-choose-prize-bonus-part-line {
+
+								width       : 100%;
+								height      : 45px;
+								margin-top  : 15px;
+								text-align  : left;
+								display     : inline-block;
+
+								&:first-child {
+
+									margin-top : 0px;
+								}
+
+								input {
+
+									height      : 30px;
+									text-indent : 10px;
+									color       : $dark-scheme-gradient-color-light-2;
+									border      : 1px solid $light-scheme-gradient-color-light-3;
+								}
+
+								div {
+
+									float       : left;
+									width       : 100%;
+									margin-top  : 2px;
+									font-family : fontRegular;
+									font-size   : 12px;
+									color       : $light-scheme-gradient-color-light-2;                                 }
+							}
+						}
+					}
+
+					.fs-back-office-prize-block-text-and-image {
+
+						background-color    : $light-scheme-gradient-color-light-3;
+						height              : 100%;
+						width               : 256px;
+						opacity             : 0.2;
+						position            : absolute;
+						left                : 400px;
+					}
+
+					.fs-back-office-prize-block-text-and-image-part {
+
+						width       : 230px;
+						height      : 350px;
+						float       : left;
+						margin-left : 25px;
+						display     : inline-block;
+						margin-top  : 25px;
+						position    : absolute;
+						left        : 390px;
+						z-index     : 1;
+
+						.fs-back-office-prize-part-prize-text-header {
+
+							width       : 100%;
+							text-align  : left;
+							font-family : fontRegular;
+							font-size   : 12px;
+							color       : $light-scheme-gradient-color-light-2;
+						}
+
+						.fs-back-office-prize-part-prize-text {
+
+							width   : 100%;
+							height  : 110px;
+							display : inline-block;
+
+
+							.fs-back-office-contest-details-text-area {
+
+								height  : 90px;
+								width   : 224px;
+								resize  : none;
+								outline : none;
+								border  : 1px solid $light-scheme-gradient-color-light-3;
+							}
+						}
+
+						.fs-back-office-prize-part-prize-image {
+
+							margin-top  : 15px;
+							height      : 156px;
+
+							input {
+
+								position    : absolute;
+								z-index     : 1;
+								cursor      : pointer;
+								width       : 230px;
+								height      : 150px;
+								opacity     : 0;
+								left        : 2px;
+							}
+
+							.fs-back-office-contest-details-image-upload-browse-container {
+
+								width               : 230px;
+								height              : 150px;
+								cursor              : pointer;
+								position            : relative;
+								margin              : 0 auto;
+								background-color    : $light-scheme-gradient-color-light-4;
+
+								.fs-back-office-contest-details-image-upload-icon-circle {
+
+									height              : 72px;
+									width               : 72px;
+									border-radius       : 36px;
+									position            : absolute;
+									display             : inline-block;
+									top                 : 36px;
+									left                : 78px;
+									box-sizing          : border-box;
+									border              : 1px solid #31d498;
+									background-color    : $light-scheme-gradient-color-light-4;
+								}
+
+								.fs-back-office-contest-details-image-upload-icon {
+
+									font-family : fantasy-font;
+									font-size   : 24pt;
+									width       : 230px;
+									position    : relative;
+									top         : 50px;
+									height      : 100px;
+									color       : #31d498;
+
+									&:before {
+
+										content: '5';
+									}
+								}
+
+								.fs-back-office-contest-details-image-upload-recycle {
+
+									font-family : fantasy-font;
+									font-size   : 12pt;
+									display     : none;
+									cursor      : pointer;
+									position    : absolute;
+									top         : 100px;
+									right       : 10px;
+									@include transition(0.2s);
+
+									&:before {
+
+										content : '#';
+									}
+								}
+							}
+
+							.fs-back-office-contest-details-image-upload {
+
+								background-size : contain;
+								width           : 170px;
+								height          : 149px;
+								opacity         : 0;
+								outline         : none;
+								position        : absolute;
+								top             : 146px;
+								left            : 30px;
+								display         : inline-block;
+							}
+						}
+
+						.fs-back-office-prize-part-prize-image-name {
+
+							margin-top  : 15px;
+
+							input {
+
+								height      : 30px;
+								text-indent : 10px;
+								width       : 225px;
+								float       : left;
+								color       : #404755;
+								border      : 1px solid $light-scheme-gradient-color-light-3;
+							}
+						}
+					}
+				}
+
+				.fs-back-office-contest-details-entry-type {
+
+					width   : 144px;
+
+					.fs-back-office-contest-entry-part {
+
+						width       : 100%;
+						height      : 40px;
+						margin-top  : 10px;
+						margin-left : 20px;
+						display     : inline-block;
+
+						.fs-back-office-contest-entry-part-line {
+
+							width   : 100%;
+							height  : 20px;
+							display : inline-block;
+
+						}
+					}
+
+					.fs-back-office-contest-multiple-entry {
+
+						display : none;
+
+						input {
+
+							outline         : none;
+							width           : 80px;
+							text-indent		: 10px;
+							margin-right    : 80px;
+						}
+					}
+
+					.fs-back-office-contest-multiple-part-visibility {
+
+						display	: inline-block;
+					}
+				}
+
+				.fs-back-office-contest-details-entries-and-prize {
+
+					width   : 263px;
+					border  : none;
+
+					.fs-back-office-contest-details-entries-and-prize-block {
+
+						height      : 205px;
+						width       : 230px;
+						margin-left : 20px;
+						float       : left;
+						//margin-top  : 25px;
+						display     : inline-block;
+
+						.fs-back-office-entries-and-prizes-input-part {
+
+							width   : 100%;
+							height  : 170px;
+							display : inline-block;
+
+							.fs-back-office-contest-details-error-message-of-size {
+
+								display             : none;
+								position            : absolute;
+								border              : 1px solid $light-scheme-gradient-color-light-1;
+								right               : 245px;
+								top                 : 83px;
+								width               : 185px;
+								height              : 30px;
+								font-size           : 10pt;
+								text-align          : center;
+								color               : $light-scheme-gradient-color-light-2;
+								background-color    : $light-scheme-gradient-color-light-5;
+
+								.fs-back-office-contest-details-error-message-of-size-part {
+
+									width               : 10px;
+									height              : 10px;
+									position            : absolute;
+									top                 : 2px;
+									right               : -6px;
+									transform           : rotate(45deg);
+									border-top          : 1px solid $light-scheme-gradient-color-light-1;
+									border-right        : 1px solid $light-scheme-gradient-color-light-1;
+									background-color    : $light-scheme-gradient-color-light-5;
+								}
+							}
+
+							.fs-back-offcie-contest-details-err-size {
+
+								display	: inline-block;
+							}
+
+							.fs-back-office-entries-and-prizes-input-part-line {
+
+								width       : 100%;
+								height      : 45px;
+								margin-top  : 10px;
+								display     : inline-block;
+
+								&:first-child {
+
+									margin-top : 0px;
+								}
+
+								.fs-back-office-entries-and-prizes-input-part-line-header {
+
+									float       : left;
+									display     : inline-block;
+									font-family : fontRegular;
+									font-size   : 12px;
+									color       : $light-scheme-gradient-color-light-2;
+								}
+
+								.fs-back-office-entries-and-prizes-input-border {
+
+									width       : 100%;
+									height      : 30px;
+									float       : left;
+									box-sizing  : border-box;
+									border      : 1px solid $light-scheme-gradient-color-light-3;
+
+									input {
+
+										border      : none;
+										margin-top  : 7px;
+										width       : 60px;
+										margin-left : 10px;
+										font-size   : 12px;
+										float       : left;
+									}
+
+									.fs-back-office-details-auto-calc-button {
+
+										color           : $light-scheme-gradient-color-light-1;
+										display         : inline-block;
+										float           : right;
+										margin-top      : 5px;
+										text-transform  : capitalize;
+										margin-right    : 10px;
+										font-size       : 17px;
+										font-family     : fontRegular;
+										cursor          : pointer;
+									}
+
+									.fs-back-office-entries-and-prizes-input-support-text {
+
+										display     : inline-block;
+										float       : left;
+										font-size   : 14px;
+										margin-top  : 7px;
+										margin-left : 5px;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+
+			.fs-back-office-contest-details-prize-type-distributed {
+
+				position            : absolute;
+				width               : 230px;
+				height              : 101%;
+				left                : 158px;
+				display             : none;
+				z-index             : 1;
+				background-color    : $light-scheme-gradient-color-light-5;
+
+				.fs-back-office-details-distributed-header {
+
+					width               : 210px;
+					height              : 30px;
+					float               : left;
+					position            : relative;
+					margin              : 0 auto;
+					background-color    : $light-scheme-gradient-color-light-4;
+
+					.fs-back-office-details-distributed-header-icon-part {
+
+						width               : 30px;
+						height              : 100%;
+						float               : left;
+						cursor              : pointer;
+						background-color    : $dark-scheme-brand-color-5;
+
+						.fs-back-office-details-distributed-header-icon {
+
+							font-size       : 10px;
+							display         : inline-block;
+							margin-right    : 3px;
+							margin-top      : 9px;
+							transform       : rotate(90deg);
+							font-family     : fantasy-font;
+							color           : $light-scheme-gradient-color-light-5;
+
+							&:before {
+
+								content : 'd';
+							}
+						}
+
+					}
+
+					.fs-back-office-details-distributed-header-text {
+
+						display         : inline-block;
+						font-size       : 12px;
+						float           : left;
+						margin-left     : 15px;
+						margin-top      : 8px;
+						text-transform  : capitalize;
+						font-family     : fontRegular;
+						color           : $light-scheme-gradient-color-light-1;
+					}
+				}
+
+				.fs-back-office-contest-details-distributed-body-block {
+
+					width       : 100%;
+					height      : 295px;
+					margin-top  : 13px;
+					overflow-y  : auto;
+					display     : inline-block;
+
+					.fs-back-office-details-distributed-body-block-header {
+
+						width       : 200px;
+						height      : 12px;
+						display     : inline-block;
+						font-family : fontRegular;
+						font-size   : 10pt;
+						float       : left;
+						color       : $light-scheme-gradient-color-light-2;
+						margin-top  : 12px;
+
+						.fs-back-office-details-distributed-body-header-parts {
+
+							display : inline-block;
+
+							&:first-child {
+
+								float   : left;
+							}
+						}
+					}
+
+					.fs-back-office-distributed-input-block {
+
+						width       : 210px;
+						height      : 30px;
+						float       : left;
+						display     : inline-block;
+						margin-top  : 8px;
+
+						.fs-back-office-distributed-input-container {
+
+							width       : 100px;
+							height      : 30px;
+							display     : inline-block;
+							text-align  : center;
+							float       : left;
+							border      : 1px solid $light-scheme-gradient-color-light-3;
+
+							&:last-child {
+
+								float : right;
+							}
+
+							.fs-back-office-distributed-input {
+
+								width       : 84px;
+								height      : 19px;
+								margin-top  : 4px;
+								cursor      : text;
+								color       : $dark-scheme-gradient-color-light-2;
+								border      : none;
+							}
+						}
+					}
+
+					.fs-back-office-contest-type-distributed-error-message {
+
+						display     : none;
+						color       : $dark-scheme-brand-color-6;
+						margin-top  : 10px;
+						font-family	: fontRegular;
+						font-size 	: 14px;
+						text-align  : left;
+					}
+				}
+
+				.fs-back-office-contest-details-distributed-buttons-block {
+
+					width       : 210px;
+					height      : 33px;
+					margin-top  : 13px;
+					float       : left;
+					display     : inline-block;
+
+					.fs-back-office-contest-details-distributed-button {
+
+						color           : $light-scheme-gradient-color-light-1;
+						width           : 102px;
+						height          : 33px;
+						border-color    : $light-scheme-gradient-color-light-3;
+						font-size       : 10pt;
+						font-family     : fontRegular;
+
+						&:hover {
+
+							color : $light-scheme-gradient-color-light-4;
+						}
+					}
+				}
+			}
+		}
+
+		//contest details end
+
+		//network part start
+
+		.fs-back-office-contest-network-part {
+
+			display 	: none;
+			margin-top 	: 40px;
+			width 		: 100%;
+			text-align	: center;
+
+			.fs-back-office-contest-network-part-list-block {
+
+				width 		: 320px;
+				margin-left : 10px;
+				height 		: 400px;
+				overflow-y 	: auto;
+				display 	: inline-block;
+
+				.fs-back-office-contest-network-part-list-line {
+
+					display 	: inline-block;
+					font-size 	: 16px;
+					margin-top 	: 10px;
+					height 		: 30px;
+					width 		: 100%;
+
+					&:first-child {
+
+						margin-top 	: 0px;
+					}
+
+					.fs-back-office-network-input-checkbox {
+
+						float 		: left;
+						height 		: 16px;
+						cursor		: pointer;
+						width 		: 16px;
+						border 		: 1px solid $light-scheme-gradient-color-light-2;
+						color 		: $light-scheme-gradient-color-light-2;
+						font-family : fantasy-font;
+						margin-top  : 7px;
+
+
+						.fs-back-office-network-input-checkbox-checked {
+
+							font-size 	: 14px;
+
+							&:before {
+
+								content : 'n';
+								cursor 	: pointer;
+								display : inline-block;
+							}
+						}
+					}
+
+					.fs-back-office-network-input-checkbox-available {
+
+						background-color 	: $light-scheme-gradient-color-light-3;
+						opacity 			: 0.5;
+					}
+
+					.fs-back-office-contest-network-part-list-text {
+
+						display 		: inline-block;
+						float 			: left;
+						cursor 			: pointer;
+						text-overflow	: ellipsis;
+						overflow 		: hidden;
+						white-space 	: nowrap;
+						width 			: 130px;
+						text-align 		: left;
+						margin-top 		: 3px;
+						color 			: $light-scheme-gradient-color-light-2;
+						margin-left 	: 10px;
+						line-height     : 30px;
+					}
+
+					&:first-child {
+
+						.fs-back-office-contest-network-part-list-text {
+
+							color 	: $light-scheme-gradient-color-light-1;
+						}
+
+						.fs-back-office-network-part-input-block {
+
+							display 	: none !important;
+						}
+
+						.fs-back-office-network-part-correction-send {
+
+							display 	: none !important;
+						}
+					}
+
+					.fs-back-office-network-part-input-block {
+
+						display 	: inline-block;
+						z-index 	: 1;
+						margin-left	: 9px;
+						box-sizing	: border-box;
+						width 		: 72px;
+						height 		: 100%;
+						line-height : 30px;
+						border 		: 1px solid $light-scheme-gradient-color-light-2;
+
+						.fs-back-office-network-correction {
+
+							display 		: inline-block;
+							float 			: right;
+							border 			: none;
+							width 			: 60px;
+							height 			: 90%;
+							text-indent 	: 10px;
+						}
+					}
+
+					.fs-back-office-network-part-correction-send {
+
+						float 				: right;
+						cursor 				: pointer;
+						width 				: 30px;
+						margin-right 		: 5px;
+						height 				: 100%;
+						background-color	: $dark-scheme-brand-color-1-light;
+						display 			: inline-block;
+						color 				: $light-scheme-gradient-color-light-5;
+						line-height         : 28px;
+						padding			    : 0 10px;
+						&:hover {
+
+							opacity : 0.8;
+						}
+
+						span {
+
+							display 			: inline-block;
+							margin-top 			: 3px;
+							font-family			: fontRegular;
+							font-size 			: 14px;
+							cursor 				: pointer;
+							text-transform		: uppercase;
+						}
+					}
+				}
+			}
+		}
+
+		//network part end
+
+		.fs-back-office-general-tabs-display {
+
+			display : inline-block;
+		}
+
+		.fs-back-office-contest-controll-buttons-block {
+
+			position        : absolute;
+			margin          : 0 auto;
+			right           : 65px;
+			top             : 605px;
+			height          : 40px;
+			width           : 495px;
+
+			.fs-back-office-contest-buttons {
+
+				color           : $light-scheme-gradient-color-light-1;
+				width           : 155px;
+				height          : 40px;
+				border-color    : $light-scheme-gradient-color-light-3;
+				font-size       : 13px;
+				margin-left     : 10px;
+				float           : right;
+				font-family     : fontRegular;
+
+				&:hover {
+
+					color : $light-scheme-gradient-color-light-4;
+				}
+			}
+
+			.fs-back-office-contest-draft-button {
+
+				display: none;
+			}
+		}
+	}
+}

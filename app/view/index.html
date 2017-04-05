@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            FSBackOffice
+        </title>
+        <link rel="shortcut icon" href="../assets/images/favicon.ico">
+        <meta name="description" charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="../assets/stylesheets/css/app.css?v0.0.11">
+        <link rel="stylesheet" type="text/css" href="../assets/stylesheets/css/normalize.css?v0.0.11">
+        <script src="../assets/libs/require.js"></script>
+        <script src="../../main.js"></script>
+    </head>
+    <body class="fs-body-style" ng-style="style">
+        <general-tabs-dir></general-tabs-dir>
+        <personal-part></personal-part>
+        <err-suc-message-dir></err-suc-message-dir>
+        <div ui-view class="fs-back-office-main-view {{general.model ? 'fs-back-office-main-view-opened' : ''}}"></div>
+   </body>
+</html>

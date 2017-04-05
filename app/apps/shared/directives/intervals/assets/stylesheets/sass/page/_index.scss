@@ -1,0 +1,35 @@
+.fs-back-office-intervals-block {
+
+	width 	: 184px;
+	float 	: left;
+	display	: inline-block;
+
+	.fs-back-office-intervals-name {
+
+		font-family		: fontRegular;
+		font-size 		: 14px;
+		width 			: 100%;
+		height 			: 15px;
+		text-transform	: capitalize;
+		display 		: inline-block;
+		padding-bottom	: 5px;
+		color 			: $dark-scheme-gradient-color-light-2;
+	}
+
+	.fs-back-office-intervals-input {
+
+		outline 			: none;
+		text-indent 		: 10px;
+		width 				: 85px;
+		cursor 				: text;
+		height 				: 30px;
+		background-color	: $light-scheme-gradient-color-light-5;
+		border 				: 1px solid $light-scheme-gradient-color-light-2;
+		color 				: $light-scheme-gradient-color-light-2;
+	}
+
+	.second-input {
+
+		margin-left : 5px;
+	}
+}
