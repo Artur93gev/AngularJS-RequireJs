@@ -9,9 +9,7 @@ define([], () => {
 
 	var httpSrv = ($http, $q, errorHandler) => {
 		let req, hostUrl, request, deferred;
-	    hostUrl   = "http://10.25.68.140:8080/backOffice/";
-	    // hostUrl   = 'https://fantasysportapi.winnerdraft.com/backOffice/';
-	    // hostUrl   = 'https://fantasysportapi.vbet.com/backOffice/';
+	    hostUrl   = "some_url";
 
 		let _request = (req, opt) => {
 			req.url = hostUrl + req.url;

@@ -2,8 +2,8 @@ module.exports = function(grunt) {
     var serveStatic = require('serve-static');
 
     var appConfig = {
-        app: '../FSSportsBackOffice',
-        index: '../FSSportsBackOffice/app/view',
+        app: '../AngularJs-RequireJs',
+        index: '../AngularJs-RequireJs/app/view',
         dist: 'deploy'
     };
 
@@ -127,117 +127,6 @@ module.exports = function(grunt) {
                     cwd: 'app/apps/accounts/assets/stylesheets/sass/',
                     src: ['app.scss'],
                     dest: 'app/apps/accounts/assets/stylesheets/css/',
-                    ext: '.css'
-                },
-                // athletes module
-                {
-                    expand: true,
-                    cwd: 'app/apps/athletes/assets/stylesheets/sass/',
-                    src: ['app.scss'],
-                    dest: 'app/apps/athletes/assets/stylesheets/css/',
-                    ext: '.css'
-                },
-                // bank module
-                {
-                    expand: true,
-                    cwd: 'app/apps/bank/assets/stylesheets/sass/',
-                    src: ['app.scss'],
-                    dest: 'app/apps/bank/assets/stylesheets/css/',
-                    ext: '.css'
-                },
-                // bonus module
-                {
-                    expand: true,
-                    cwd: 'app/apps/bonus/assets/stylesheets/sass/',
-                    src: ['app.scss'],
-                    dest: 'app/apps/bonus/assets/stylesheets/css/',
-                    ext: '.css'
-                },
-                // challanges module
-                {
-                    expand: true,
-                    cwd: 'app/apps/challanges/assets/stylesheets/sass/',
-                    src: ['app.scss'],
-                    dest: 'app/apps/challanges/assets/stylesheets/css/',
-                    ext: '.css'
-                },
-                // cloud module
-                {
-                    expand: true,
-                    cwd: 'app/apps/cloud/assets/stylesheets/sass/',
-                    src: ['app.scss'],
-                    dest: 'app/apps/cloud/assets/stylesheets/css/',
-                    ext: '.css'
-                },
-                // contestCreate module
-                {
-                    expand: true,
-                    cwd: 'app/apps/contestCreate/assets/stylesheets/sass/',
-                    src: ['app.scss'],
-                    dest: 'app/apps/contestCreate/assets/stylesheets/css/',
-                    ext: '.css'
-                },
-                {
-                    expand: true,
-                    cwd: 'app/apps/contestCreate/directives/imageUpload/assets/stylesheets/sass/',
-                    src: ['app.scss'],
-                    dest: 'app/apps/contestCreate/directives/imageUpload/assets/stylesheets/css/',
-                    ext: '.css'
-                },
-                // contests module
-                {
-                    expand: true,
-                    cwd: 'app/apps/contests/assets/stylesheets/sass/',
-                    src: ['app.scss'],
-                    dest: 'app/apps/contests/assets/stylesheets/css/',
-                    ext: '.css'
-                },
-                // leagues module
-                {
-                    expand: true,
-                    cwd: 'app/apps/leagues/assets/stylesheets/sass/',
-                    src: ['app.scss'],
-                    dest: 'app/apps/leagues/assets/stylesheets/css/',
-                    ext: '.css'
-                },
-                // login module
-                {
-                    expand: true,
-                    cwd: 'app/apps/login/assets/stylesheets/sass/',
-                    src: ['app.scss'],
-                    dest: 'app/apps/login/assets/stylesheets/css/',
-                    ext: '.css'
-                },
-                // logs module
-                {
-                    expand: true,
-                    cwd: 'app/apps/logs/assets/stylesheets/sass/',
-                    src: ['app.scss'],
-                    dest: 'app/apps/logs/assets/stylesheets/css/',
-                    ext: '.css'
-                },
-                // loyality module
-                {
-                    expand: true,
-                    cwd: 'app/apps/loyality/assets/stylesheets/sass/',
-                    src: ['app.scss'],
-                    dest: 'app/apps/loyality/assets/stylesheets/css/',
-                    ext: '.css'
-                },
-                // missions module
-                {
-                    expand: true,
-                    cwd: 'app/apps/missions/assets/stylesheets/sass/',
-                    src: ['app.scss'],
-                    dest: 'app/apps/missions/assets/stylesheets/css/',
-                    ext: '.css'
-                },
-                // users module
-                {
-                    expand: true,
-                    cwd: 'app/apps/users/assets/stylesheets/sass/',
-                    src: ['app.scss'],
-                    dest: 'app/apps/users/assets/stylesheets/css/',
                     ext: '.css'
                 },
                 // platform module
