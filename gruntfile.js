@@ -28,44 +28,6 @@ module.exports = function(grunt) {
                 }
             }
         },
-
-        // ngtemplates: {
-        //     app:        {
-        //         src:      ['../views/**/*.html', '../index.html'],
-        //         dest:     '../scripts/js/template.js',
-        //         options:  {
-        //             htmlmin: {
-        //                 collapseBooleanAttributes:      true,
-        //                 collapseWhitespace:             true,
-        //                 removeAttributeQuotes:          true,
-        //                 removeComments:                 true, // Only if you don't use comment directives!
-        //                 removeEmptyAttributes:          true,
-        //                 removeRedundantAttributes:      true,
-        //                 removeScriptTypeAttributes:     true,
-        //                 removeStyleLinkTypeAttributes:  true,
-        //                 keepClosingSlash:               true
-        //             }
-        //         }
-        //     },
-        //     login : {
-        //         src:      ['../views/home/login/partner-login.html'],
-        //         dest:     '../scripts/js/templateLogin.js',
-        //         options:  {
-        //             htmlmin: {
-        //                 collapseBooleanAttributes:      true,
-        //                 collapseWhitespace:             true,
-        //                 removeAttributeQuotes:          true,
-        //                 removeComments:                 true, // Only if you don't use comment directives!
-        //                 removeEmptyAttributes:          true,
-        //                 removeRedundantAttributes:      true,
-        //                 removeScriptTypeAttributes:     true,
-        //                 removeStyleLinkTypeAttributes:  true,
-        //                 keepClosingSlash:               true
-        //             }
-        //         }
-        //     }
-        // },
-
         concat: {
             js: {
                 files: {
@@ -83,26 +45,6 @@ module.exports = function(grunt) {
             options: { force: true },
             folder: ['../deploy/']
         },
-
-        // ngAnnotate: {
-        //     default: {
-        //         files: {
-        //             '../scripts/js/main.js': ['../scripts/js/main.js']
-        //         }
-        //     }
-        // // },
-        // uglify: {
-        //     options: {
-        //         compress: {
-        //             drop_console: false
-        //         }
-        //     },
-        //     dist: {
-        //         files: {
-        //             '../scripts/js/main.min.js': ['../scripts/js/main.js']
-        //         }
-        //     }
-        // },
         sass: {
             dist: {
                 files: [
@@ -267,49 +209,22 @@ module.exports = function(grunt) {
                     '**/*/app.css',
                     'main.js',
                     'index.html'
-                ],
-                tasks: [
-                    //'ngtemplates',
-                    // 'concat',
-                    //'ngAnnotate',
-                    //'uglify',
-                    // 'sass',
-                    // 'connect'
-                  ]
+                ]
             }
         }
     });
 
     grunt.loadNpmTasks('grunt-contrib-concat');
-    grunt.loadNpmTasks('grunt-concat-sourcemap');
     grunt.loadNpmTasks('grunt-contrib-copy');
-    grunt.loadNpmTasks('grunt-ng-annotate');
-    grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-angular-templates');
 
     grunt.registerTask('default', [
-        // 'ngtemplates',
         'concat',
-        // 'ngAnnotate',
-        // 'uglify',
         'sass',
-        // 'concat_sourcemap',
         'connect',
         'watch'
     ]);
-
-    grunt.registerTask('deploy', [
-        'ngtemplates',
-        'concat',
-        'ngAnnotate',
-        'uglify',
-        'sass',
-        'clean',
-        'copy'
-    ]);
-
 };
