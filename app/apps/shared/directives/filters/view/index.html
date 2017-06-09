@@ -1,22 +1,22 @@
-<div class="fs-back-office-filters-container">
-	<div class="fs-back-office-filters-block">
-		<div class="fs-back-office-filters-header-block">
-			<div class="fs-back-office-filters-header-item">
-				<span class="fs-back-office-filters-header-name">
+<div class="filters-container">
+	<div class="filters-block">
+		<div class="filters-header-block">
+			<div class="filters-header-item">
+				<span class="filters-header-name">
 					{{::filters.title}}
 				</span>
 			</div>
 		</div>
-		<div class="fs-back-office-filters-action-block">
+		<div class="filters-action-block">
 			<checkbox-dir options="checkbox.options" fn="checkbox.fn" ng-repeat="checkbox in options.checkboxes"></checkbox-dir>
 			<radiobuttons-dir options="radiobutton.options" fn="radiobutton.fn" ng-repeat="radiobutton in options.radiobuttons"></radiobuttons-dir>
 		</div>
 	</div>
-	<div class="fs-back-office-filters-botton-block">
-		<button class="fs-back-office-filters-button" ng-click="filters.search($event)">
+	<div class="filters-botton-block">
+		<button class="filters-button" ng-click="filters.search($event)">
 			{{::filters.searchName}}
 		</button>
-		<button class="fs-back-office-filters-button" ng-click="filters.reset($event)">
+		<button class="filters-button" ng-click="filters.reset($event)">
 			{{::filters.resetName}}
 		</button>
 	</div>

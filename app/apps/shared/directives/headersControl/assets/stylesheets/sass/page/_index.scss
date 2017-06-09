@@ -1,4 +1,4 @@
-.fs-back-office-headers-block {
+.headers-block {
 
     width               : 36px;
     height              : 36px;
@@ -10,7 +10,7 @@
     color               : $light-scheme-gradient-color-light-1;
     background-color    : $light-scheme-gradient-color-light-5;
 
-    .fs-back-office-headers-icon {
+    .headers-icon {
 
         font-family : fantasy-font;
         font-size   : 20px;
@@ -25,7 +25,7 @@
     }
 }
 
-.fs-back-office-header-control-block {
+.header-control-block {
 
     position            : absolute;
     width               : 400px;
@@ -36,7 +36,7 @@
     background-color    : $light-scheme-gradient-color-light-4;
     border              : 1px solid $light-scheme-gradient-color-light-2;
 
-    .fs-back-office-header-control-line {
+    .header-control-line {
 
         width       : 50%;
         height      : 20px;
@@ -53,7 +53,7 @@
             float   : right;
         }
 
-        .fs-back-office-header-control-input {
+        .header-control-input {
 
             display             : inline-block;
             height              : 16px;
@@ -68,7 +68,7 @@
             border              : 1px solid $light-scheme-gradient-color-light-2;
             background-color    : $light-scheme-gradient-color-light-5;
 
-            .fs-back-office-header-control-input-checked {
+            .header-control-input-checked {
 
                 &:before {
 
@@ -80,7 +80,7 @@
             }
         }
 
-        .fs-back-office-header-control-text {
+        .header-control-text {
 
             font-family : fontRegular;
             font-size   : 14px;
@@ -92,7 +92,7 @@
     }
 }
 
-.fs-back-office-header-control-block-display {
+.header-control-block-display {
 
     display : inline-block;
 }

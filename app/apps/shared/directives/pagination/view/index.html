@@ -1,6 +1,6 @@
-<div class="fs-pagination-block {{arrOfPages.floatToRight ? 'fs-pagination-to-right' : ''}}" ng-show="arrOfPages.pages.length > 1">
-    <div class="fs-each-page {{(item.value == '...') ? 'fs-page-etc' : ''}} {{(item.model) ? 'fs-page-active' : ''}}" ng-repeat="item in arrOfPages.pages" ng-click="arrOfPages.choosedPageFromTable(item)">
-		<span class="fs-page-text">
+<div class="pagination-block {{arrOfPages.floatToRight ? 'pagination-to-right' : ''}}" ng-show="arrOfPages.pages.length > 1">
+    <div class="each-page {{(item.value == '...') ? 'page-etc' : ''}} {{(item.model) ? 'page-active' : ''}}" ng-repeat="item in arrOfPages.pages" ng-click="arrOfPages.choosedPageFromTable(item)">
+		<span class="page-text">
 			{{item.value}}
 		</span>
     </div>

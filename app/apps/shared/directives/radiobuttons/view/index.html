@@ -1,12 +1,12 @@
-<div class="fs-back-office-contest-filter-contest-detail-name-block">
-	<span class="fs-back-office-contest-filter-contest-detail-name">
+<div class="name-block">
+	<span class="name">
 		{{::radiobuttons.itemList.name}}
 	</span>
-	<div class="fs-back-office-contest-filter-contest-detail-line" ng-repeat="item in radiobuttons.itemList.list" ng-click="radiobuttons.control($event, item)">
-		<div class="fs-back-office-contest-filter-contest-detail-line-radio">
-			<span class=" {{item.model ? 'fs-back-office-contest-filter-contest-detail-line-radio-checked' : ''}}"></span>
+	<div class="line" ng-repeat="item in radiobuttons.itemList.list" ng-click="radiobuttons.control($event, item)">
+		<div class="line-radio">
+			<span class=" {{item.model ? 'line-radio-checked' : ''}}"></span>
 		</div>
-		<span class="fs-back-office-contest-filter-contest-detail-line-name">
+		<span class="line-name">
 			{{::item.name}}
 		</span>
 	</div>

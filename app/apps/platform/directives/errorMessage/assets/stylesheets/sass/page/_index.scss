@@ -1,4 +1,4 @@
-.fs-back-office-error-success-message-body-block {
+.error-success-message-body-block {
 
 	width                   : 100%;
 	height                  : 100%; 
@@ -10,7 +10,7 @@
 	background-color        : rgba(18, 22, 35, 0.94);
 	display                 : flex;     
 
-	.fs-back-office-message-block {
+	.message-block {
 
 		position            : relative;
 		margin              : 0 auto;
@@ -20,7 +20,7 @@
 		text-align 			: center;
 		background-color    : $light-scheme-gradient-color-light-5;
 
-		.fs-back-office-message-block-header {
+		.message-block-header {
 
 			width           : 100%;
 			height          : 80px;
@@ -28,7 +28,7 @@
 			border-bottom   : 1px solid $light-scheme-gradient-color-light-4;
 			display         : inline-block;
 
-			.fs-back-office-message-block-header-text {
+			.message-block-header-text {
 
 				font-family     : fontRegular;
 				font-size       : 20px;
@@ -38,7 +38,7 @@
 				text-transform  : uppercase;
 			}
 
-			.fs-back-office-message-block-header-icon-success {
+			.message-block-header-icon-success {
 
 				font-family		: fantasy-font;
 				font-size 		: 17px;
@@ -57,14 +57,14 @@
 			}
 		}
 
-		.fs-back-office-message-content-block {
+		.message-content-block {
 
 			width 		: 320px;
 			height 		: 90px;
 			margin-top	: 20px;
 			display 	: inline-block;
 
-			.fs-back-office-message-content-text {
+			.message-content-text {
 
 				font-family : fontRegular;
 				font-size 	: 18px;
@@ -73,7 +73,7 @@
 			}
 		}
 
-		.fs-back-office-message-content-icon-round {
+		.message-content-icon-round {
 
 			width  				: 40px;
 			height 				: 40px;
@@ -84,7 +84,7 @@
 			background-color	: $dark-scheme-brand-color-6;
 			color 				: $light-scheme-gradient-color-light-5;
 
-			.fs-back-office-message-content-icon {
+			.message-content-icon {
 
 				font-family : fantasy-font;
 				font-size	: 20px;
@@ -98,7 +98,7 @@
 			}
 		}
 
-		.fs-back-office-message-content-buttons-block {
+		.message-content-buttons-block {
 
 			width 		: 320px;
 			height 		: 40px;
@@ -106,7 +106,7 @@
 			position 	: relative;
 			top 		: 0px;
 
-			.fs-back-office-message-content-apply-button {
+			.message-content-apply-button {
 
 				width 				: 155px;
 				height 				: 100%;

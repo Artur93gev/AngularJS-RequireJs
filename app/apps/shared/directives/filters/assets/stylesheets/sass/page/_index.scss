@@ -1,23 +1,23 @@
-.fs-back-office-filters-container {
+.filters-container {
 
 	width 		: 100%;
 	display 	: inline-block;
 	box-sizing	: border-box;
 	border 		: 1px solid $dark-scheme-body-color;
 
-	.fs-back-office-filters-block {
+	.filters-block {
 
 		display	: inline-block;
 		width 	: 100%;
 
-		.fs-back-office-filters-header-block {
+		.filters-header-block {
 
 			height				: 36px;
 			width				: 100%;
 			display				: inline-block;
 			background-color	: $light-scheme-gradient-color-light-3;
 
-			.fs-back-office-filters-header-item {
+			.filters-header-item {
 
 				text-align 			: center;
 				display 			: inline-block;
@@ -25,7 +25,7 @@
 				height 				: 100%;
 				background-color	: $light-scheme-gradient-color-light-5;
 
-				.fs-back-office-filters-header-name {
+				.filters-header-name {
 
 					color 			: $light-scheme-gradient-color-light-1;
 					font-family		: fontRegular;
@@ -38,7 +38,7 @@
 			}
 		}
 
-		.fs-back-office-filters-action-block {
+		.filters-action-block {
 
 			width 				: calc(100% - 40px);
 			display				: inline-block;
@@ -48,7 +48,7 @@
 		}
 	}
 
-	.fs-back-office-filters-botton-block {
+	.filters-botton-block {
 
 		height 				: 60px;
 		width 				: 100%;
@@ -57,7 +57,7 @@
 		float 				: left;
 		background-color	: $light-scheme-gradient-color-light-4;
 
-		.fs-back-office-filters-button {
+		.filters-button {
 
 			float 				: right;
 			margin-right		: 20px;

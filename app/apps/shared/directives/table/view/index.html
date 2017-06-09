@@ -1,26 +1,26 @@
-<div class="fs-back-office-outer-container">
-	<div class="fs-back-office-inner-container">
-	    <div class="fs-back-office-contest-grid-header-block">
-	        <div ng-if="item.model" class="fs-back-office-contest-grid-header-item" ng-repeat="item in headersForTable[0]">
-	        	<span class="fs-back-office-contest-grid-header-item-text">
+<div class="outer-container">
+	<div class="inner-container">
+	    <div class="grid-header-block">
+	        <div ng-if="item.model" class="grid-header-item" ng-repeat="item in headersForTable[0]">
+	        	<span class="grid-header-item-text">
 	        		{{::item.name}}
-	        		<span class="fs-back-office-contest-grid-header-icon"></span>	
+	        		<span class="grid-header-icon"></span>	
 	        	</span>
 	        </div>
 	    </div>
-	    <div class="fs-back-office-contest-grid-content">
-	    	<div ng-repeat="item in headersForTable" ng-init="index = $index" class="fs-back-office-contest-grid-line {{(item.$$model) ? 'fs-back-office-grid-line-checked': ''}}">
-    			<span class="fs-back-office-contest-grid-line-checkbox" ng-click="choosingContestsForCancel(item)">
-    				<span class="{{(item.$$model) ? 'fs-back-office-contest-grid-line-checkbox-checked' : ''}}"></span>
+	    <div class="grid-content">
+	    	<div ng-repeat="item in headersForTable" ng-init="index = $index" class="grid-line {{(item.$$model) ? 'grid-line-checked': ''}}">
+    			<span class="grid-line-checkbox" ng-click="choosingContestsForCancel(item)">
+    				<span class="{{(item.$$model) ? 'grid-line-checkbox-checked' : ''}}"></span>
     			</span>
-	    		<div ng-if="info.model" class="fs-back-office-contest-grid-line-item {{(isNumber(info.value)) ? 'fs-back-office-contest-grid-line-item-number' : ''}}" ng-repeat="info in item track by $index"  ng-click="getMoreInfo(index, info)">
-	    			<span class="fs-back-office-contest-grid-line-item-text {{((info.name == 'PrizeFundType') || info.name == 'ContestDate') ? 'fs-back-office-contest-grid-line-item-text-visibility' : ''}}">
+	    		<div ng-if="info.model" class="grid-line-item {{(isNumber(info.value)) ? 'grid-line-item-number' : ''}}" ng-repeat="info in item track by $index"  ng-click="getMoreInfo(index, info)">
+	    			<span class="grid-line-item-text {{((info.name == 'PrizeFundType') || info.name == 'ContestDate') ? 'grid-line-item-text-visibility' : ''}}">
 	    				{{::info.value}}
 	    			</span>
-	    			<span ng-if="(info.name == 'ContestDate')" class="fs-back-office-contest-grid-line-item-text">
+	    			<span ng-if="(info.name == 'ContestDate')" class="grid-line-item-text">
 	    				{{(info.value.IsContestStartDate) ? (info.value.ContestDate | date:'HH:mm:ss') : (info.value.ContestDate | date: 'M/d/yy h:mm')}}
 	    			</span>
-	    			<span ng-if="(info.name == 'PrizeFundType')" class="fs-back-office-contest-grid-line-item-prize-icon {{'fs-back-office-contest-grid-line-item-prize-' + info.value}}"></span>
+	    			<span ng-if="(info.name == 'PrizeFundType')" class="grid-line-item-prize-icon {{'grid-line-item-prize-' + info.value}}"></span>
 	    		</div>
 	    	</div>
 	    </div>

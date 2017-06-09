@@ -1,4 +1,4 @@
-.fs-back-office-icon {
+.icon {
 
 	font-family : fantasy-font;
 	font-size   : 22px;
@@ -6,7 +6,7 @@
 	margin-top  : 15px;
 }
 
-.fs-back-office-header {
+.header {
 	
 	width       		: calc(100vw - 50px);
 	height      		: 56px;
@@ -17,7 +17,7 @@
 	background-color	: $light-scheme-gradient-color-light-5;
 	@include transition(0.3s);
 
-	.fs-back-office-header-icon {
+	.header-icon {
 
 		margin-left : 25px;
 		cursor 		: pointer;
@@ -29,13 +29,13 @@
 		}
 	}
 
-	.fs-back-office-header-personal-part {
+	.header-personal-part {
 
 		height  : 100%;
 		width   : 520px;
 		float   : right;
 
-		.fs-back-office-header-personal-part-help {
+		.header-personal-part-help {
 
 			float       : left;
 			margin-left : 25px;
@@ -47,7 +47,7 @@
 			}
 		}
 
-		.fs-back-office-header-personal-part-notification {
+		.header-personal-part-notification {
 
 			float       : left;
 			margin-left : 10px;
@@ -59,7 +59,7 @@
 			}
 		}
 
-		.fs-back-office-header-personal-part-message {
+		.header-personal-part-message {
 
 			float       : left;
 			margin-left : 10px;
@@ -71,7 +71,7 @@
 			}
 		}
 
-		.fs-back-office-header-personal-seperate-lines {
+		.header-personal-seperate-lines {
 
 			float               : left;
 			width               : 1px;
@@ -81,7 +81,7 @@
 			background-color    : $light-scheme-gradient-color-light-1;
 		}
 
-		.fs-back-office-header-personal-current-wallet {
+		.header-personal-current-wallet {
 
 			float       : left;
 			margin-left : 15px;
@@ -93,7 +93,7 @@
 			}
 		}
 		
-		.fs-back-office-header-personal-bank-wallet {
+		.header-personal-bank-wallet {
 			
 			float		: left;
 			margin-left : 15px;
@@ -105,7 +105,7 @@
 			}
 		}
 		
-		.fs-back-office-header-personal-cloud-wallet {
+		.header-personal-cloud-wallet {
 			
 			float 		: left;
 			margin-left : 15px;
@@ -117,12 +117,12 @@
 			}
 		}
 
-		.fs-back-office-header-personal-wallet-block {
+		.header-personal-wallet-block {
 
 			display : inline-block;
 			float 	: left;
 			
-			.fs-back-office-header-personal-wallet-text {
+			.header-personal-wallet-text {
 
 				float       	: left;
 				display     	: inline-block;
@@ -134,7 +134,7 @@
 				margin-left		: 10px; 	
 			}
 
-			.fs-back-office-header-personal-wallet-score {
+			.header-personal-wallet-score {
 
 				margin-left	: 10px;
 				margin-top 	: 26px;
@@ -143,7 +143,7 @@
 
 		}
 		
-		.fs-back-office-header-personal-part-user-icon {
+		.header-personal-part-user-icon {
 
 			float 		: left;
 			margin-left : 15px;
@@ -155,7 +155,7 @@
 			}
 		}
 
-		.fs-back-office-header-personal-part-username {
+		.header-personal-part-username {
 
 			font-family 	: fontRegular;
 			font-size 		: 16px;
@@ -168,7 +168,7 @@
 			margin-top 		: 16px;
 		}
 
-		.fs-back-office-header-personal-part-username-icon {
+		.header-personal-part-username-icon {
 
 			float 		: left;
 			margin-left	: 10px;
@@ -183,7 +183,7 @@
 			}
 		}
 
-		.fs-back-office-header-personal-part-lang-border {
+		.header-personal-part-lang-border {
 
 			width 			: 56px;
 			height 			: 33px;
@@ -193,7 +193,7 @@
 			display			: inline-block;
 			border 			: 1px solid $light-scheme-gradient-color-light-2;
 
-			.fs-back-office-header-personal-part-lang {
+			.header-personal-part-lang {
 
 				display			: inline-block;
 				float 			: left;
@@ -205,7 +205,7 @@
 				color 			: $light-scheme-gradient-color-light-2; 
 			}
 
-			.fs-back-office-header-personal-part-lang-icon {
+			.header-personal-part-lang-icon {
 
 				float 		: left;
 				margin-left	: 5px;
@@ -220,7 +220,7 @@
 			}
 		}
 
-		.fs-back-office-general-tab-user-settings {
+		.general-tab-user-settings {
 
 			display 	: inline-block;
 			position 	: absolute;
@@ -231,7 +231,7 @@
 			border 		: 1px solid $light-scheme-gradient-color-light-2;
 			top 		: 35px;
 
-			.fs-back-office-general-tab-user-settings-log-out {
+			.general-tab-user-settings-log-out {
 
 				font-size 	: 14px;
 				cursor 		: pointer;
@@ -244,7 +244,7 @@
 	}
 }
 
-.fs-back-office-not-available-modal {
+.not-available-modal {
 
 	position 			: absolute;
 	padding 			: 10px;
@@ -254,7 +254,7 @@
 	background-color	: $light-scheme-gradient-color-light-2;
 	z-index 			: 2;
 
-	.fs-back-office-not-available-modal-part {
+	.not-available-modal-part {
 
 		display				: inline-block;
 		background-color	: $light-scheme-gradient-color-light-2;
@@ -267,7 +267,7 @@
 
 	}
 
-	.fs-back-office-not-available-modal-text {
+	.not-available-modal-text {
 
 		font-family	: fontRegular;
 		font-size 	: 16px;
@@ -275,12 +275,12 @@
 	}
 }
 
-.fs-back-office-not-available-modal-visibility {
+.not-available-modal-visibility {
 
 	display : inline-block;
 }
 
-.fs-back-office-header-opened {
+.header-opened {
 
 	width : calc(100vw - 240px);
 }

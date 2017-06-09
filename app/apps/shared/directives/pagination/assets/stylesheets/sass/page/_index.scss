@@ -1,4 +1,4 @@
-.fs-pagination-block {
+.pagination-block {
 
     width       : 330px;
     position    : absolute;
@@ -6,13 +6,13 @@
     bottom      : 10px;
     left        : 10px;
 
-    &.fs-pagination-to-right {
+    &.pagination-to-right {
 
         padding-left  : 111px;
         box-sizing    : border-box;
     }
 
-    .fs-each-page {
+    .each-page {
 
         width               : 34px;
         height              : 100%;
@@ -29,7 +29,7 @@
             margin-left : 0px;
         }
 
-        .fs-page-text {
+        .page-text {
 
             font-family : fontRegular;
             cursor      : pointer;
@@ -45,21 +45,21 @@
         }
     }
 
-    .fs-page-etc {
+    .page-etc {
 
         background-color   : $dark-scheme-body-color;
         color              : $light-scheme-gradient-color-light-1;
         cursor             : default;
         pointer-events     : none;
 
-        .fs-page-text {
+        .page-text {
 
             cursor     : default;
             margin-top : 16px;
         }
     }
 
-    .fs-page-active {
+    .page-active {
 
         background-color    : $light-scheme-gradient-color-light-5;
         color               : $dark-scheme-brand-color-1-light;

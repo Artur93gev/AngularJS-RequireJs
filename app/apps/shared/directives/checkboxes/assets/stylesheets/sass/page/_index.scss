@@ -1,10 +1,10 @@
-.fs-back-office-contest-filter-contest-detail-name-block {
+.name-block {
 
 	display	: inline-block;
 	width 	: 130px;
 	float 	: left;
 
-	.fs-back-office-contest-filter-contest-detail-name {
+	.name {
 
 		font-family		: fontRegular;
 		color 			: $dark-scheme-gradient-color-light-2;
@@ -15,7 +15,7 @@
 		display 		: inline-block;
 	}
 
-	.fs-back-office-contest-filter-contest-detail-line {
+	.line {
 
 		display		: inline-block;
 		height 		: 16px;
@@ -23,7 +23,7 @@
 		cursor 		: pointer;
 		width		: 100%;
 
-		.fs-back-office-contest-filter-contest-detail-line-checkbox {
+		.line-checkbox {
 
 			display		: inline-block;
 			width 		: 16px;
@@ -34,7 +34,7 @@
 			box-sizing	: border-box;
 			border 		: 1px solid $light-scheme-gradient-color-light-2;
 
-			.fs-back-office-contest-filter-contest-detail-line-checkbox-checked {
+			.line-checkbox-checked {
 
 				display		: inline-block;
 				font-family	: fantasy-font;
@@ -51,7 +51,7 @@
 				}
 			}
 
-			.fs-back-office-contest-filter-contest-detail-line-radio {
+			.line-radio {
 
 				width 				: 8px;
 				height				: 8px;
@@ -64,7 +64,7 @@
 			}
 		}
 
-		.fs-back-office-contest-filter-contest-detail-line-name {
+		.line-name {
 
 			display			: inline-block;
 			font-family		: fontRegular;

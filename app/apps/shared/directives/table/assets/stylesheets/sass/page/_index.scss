@@ -1,4 +1,4 @@
-.fs-back-office-outer-container {
+.outer-container {
     
     position    : absolute;
     left        : 10px;
@@ -6,14 +6,14 @@
     bottom      : 56px;
     overflow    : visible;
 
-    .fs-back-office-inner-container {
+    .inner-container {
         
         width       : 100%;
         position    : relative;
         overflow    : hidden;
         overflow-x  : auto;
         
-        .fs-back-office-contest-grid-header-block {
+        .grid-header-block {
 
             width               : 130%;
             position            : relative;
@@ -22,13 +22,13 @@
             transition          : width 0.7s;
             -webkit-transition  : width 0.7s;
 
-            .fs-back-office-contest-grid-header-item {
+            .grid-header-item {
 
                 display     : inline-block;
                 width       : 123px;
                 text-align  : center;
 
-                .fs-back-office-contest-grid-header-item-text {
+                .grid-header-item-text {
 
                     float       : left;
                     font-family : fontRegular;
@@ -39,7 +39,7 @@
                     margin-top  : 10px;
                     color       : $light-scheme-gradient-color-light-5;
                     
-                    .fs-back-office-contest-grid-header-icon {
+                    .grid-header-icon {
 
                         font-family : fantasy-font !important;
                         font-size   : 10px;
@@ -56,7 +56,7 @@
             }
         }
         
-        .fs-back-office-contest-grid-content {
+        .grid-content {
 
             display             : inline-block;
             overflow-y          : hidden;
@@ -64,7 +64,7 @@
             transition          : width 0.7s;
             -webkit-transition  : width 0.7s;
          
-            .fs-back-office-contest-grid-line {
+            .grid-line {
 
                 height      : 42px;
                 width       : 100%;
@@ -80,7 +80,7 @@
                     background-color : $light-scheme-gradient-color-light-4;
                 }
 
-                .fs-back-office-contest-grid-line-checkbox {
+                .grid-line-checkbox {
 
                     display     : inline-block;
                     width       : 16px;
@@ -94,7 +94,7 @@
                     font-family : fantasy-font;
                     position    : absolute;
 
-                    .fs-back-office-contest-grid-line-checkbox-checked {
+                    .grid-line-checkbox-checked {
 
                         &:before {
 
@@ -105,7 +105,7 @@
                     }
                 }
 
-                .fs-back-office-contest-grid-line-item {
+                .grid-line-item {
 
                     display         : inline-block;
                     width           : 123px;
@@ -116,7 +116,7 @@
                     white-space     : nowrap;
                     text-overflow   : ellipsis;
 
-                    .fs-back-office-contest-grid-line-item-text {
+                    .grid-line-item-text {
                  
                         font-family : fontRegular;
                         font-size   : 12px;
@@ -125,12 +125,12 @@
                         color       : $dark-scheme-gradient-color-light-2;
                     }
 
-                    .fs-back-office-contest-grid-line-item-text-visibility {
+                    .grid-line-item-text-visibility {
 
                         display : none;
                     }
 
-                    .fs-back-office-contest-grid-line-item-prize-icon {
+                    .grid-line-item-prize-icon {
 
                         font-family : fantasy-font;
                         font-size   : 22px;
@@ -140,7 +140,7 @@
                         display     : inline-block;
                     }
 
-                    .fs-back-office-contest-grid-line-item-prize-10 {
+                    .grid-line-item-prize-10 {
 
                         &:before {
 
@@ -148,7 +148,7 @@
                         }
                     }
 
-                    .fs-back-office-contest-grid-line-item-prize-9 {
+                    .grid-line-item-prize-9 {
                      
                         &:before {
 
@@ -156,7 +156,7 @@
                         }   
                     }
 
-                    .fs-back-office-contest-grid-line-item-prize-8 {
+                    .grid-line-item-prize-8 {
                         
                         &:before {
 
@@ -164,7 +164,7 @@
                         }
                     }
 
-                    .fs-back-office-contest-grid-line-item-prize-6 {
+                    .grid-line-item-prize-6 {
                         
 
                         &:before {
@@ -173,7 +173,7 @@
                         }
                     }
 
-                    .fs-back-office-contest-grid-line-item-prize-5 {
+                    .grid-line-item-prize-5 {
                         
 
                         &:before {
@@ -182,7 +182,7 @@
                         }
                     }
 
-                    .fs-back-office-contest-grid-line-item-prize-4 {
+                    .grid-line-item-prize-4 {
                         
 
                         &:before {
@@ -191,7 +191,7 @@
                         }
                     }
 
-                    .fs-back-office-contest-grid-line-item-prize-2 {
+                    .grid-line-item-prize-2 {
                         
                         &:before {
 
@@ -199,7 +199,7 @@
                         }
                     }
 
-                    .fs-back-office-contest-grid-line-item-prize-1 {
+                    .grid-line-item-prize-1 {
                         
 
                         &:before {
@@ -208,7 +208,7 @@
                         }
                     }
 
-                    .fs-back-office-contest-grid-line-item-text-type {
+                    .grid-line-item-text-type {
 
                         display : none;
                     }
@@ -219,7 +219,7 @@
                     background-color    : #d6d6df;
                 }
                 
-                .fs-back-office-contest-grid-line-item-number {
+                .grid-line-item-number {
 
                     text-align : right;
 
@@ -230,7 +230,7 @@
                 }
             }
 
-            .fs-back-office-grid-line-checked {
+            .grid-line-checked {
 
                 background-color    : #d6d6df !important;
             }
