@@ -5,12 +5,12 @@ SYNOPSYS
 	As an apllication it is following several concepts :
 		
 		1. AMD(Asynchronous module definition)
-			Application is using Amd to have faster web application which will be able to become bigger and eat more resources than usually application does, but at the same time not showing any low performance.This technology is providing us RequireJs.We're using 2.1.22 version of RequireJs.
+			Application is using AMD to have faster web application which will be able to become bigger and eat less resources than usually application does, but at the same time not showing any low performance.This technology is providing us RequireJs.We're using 2.1.22 version of RequireJs.
 		2. Modulized AngularJs Application
-			Application is writen in AngularJs(v1.3.15).Application has is using itself another applications which are 
+			Application is writen in AngularJs(v1.3.15).Application itself is using another applications which are 
 			included as dependencies and realised as angular modules.All this module/applications are using the same 
-			platform module to connect to eahc other, to use error-handler and Facade part.Also they have their shared module which is alloing application to go trought the code repeating using shared functionality
-		3. EDP(Event Driven Programing)
+			platform module to connect to each other, to use error-handler and Facade layer.Also they have their shared module which is allowing application to go trought the code repeating using shared functionality
+		3. EDP(Event Driven Programming)
 			Each module is a single application and is based on events without understanding from where is coming event
 			for whom is his own functionality
 
