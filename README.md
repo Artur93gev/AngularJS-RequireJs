@@ -52,4 +52,4 @@ INSTALL
 
 	Running application
 
-		. grunt (it we'll be open your own machine's 9000 port (localhost://9000))
+		. grunt (it will open your own machine's 9000 port (localhost://9000) in your default browser)
